@@ -24,7 +24,7 @@ $headings-margin-bottom: $spacer * 1;
 $line-height-base: 1.7;
 
 // Navbar
-$navbar-nav-link-padding-x: 0.5rem;
+$navbar-nav-link-padding-x: 0.3rem;
 $navbar-padding-y: 1rem;
 $navbar-dark-color: #fff;
 
@@ -48,12 +48,16 @@ $headings-font-weight: bold;
 
 @media only screen and (min-width: 1200px) {
   .navbar .navbar-nav .nav-item .nav-link {
-    padding: 0 1em; /* Espaciado entre elementos */
+    padding: 0 0.3em; /* Espaciado entre elementos */
+    font-size: 6;
   }
   .navbar .navbar-nav .nav-item:not(:last-child) .nav-link {
     border-right: 1px solid #0000002a; /* Línea vertical */
   }
 }
 
+.navbar{
+  background: $light;
+}
 
 @import '../node_modules/bootstrap/scss/bootstrap';
