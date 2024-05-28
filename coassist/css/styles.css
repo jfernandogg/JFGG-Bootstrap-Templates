@@ -1,4 +1,34 @@
+@charset "UTF-8";
 .carrousel .slider {
   width: 70%;
   margin: 0 auto;
+}
+
+.imagesep-container {
+  width: 100%; /* Ancho deseado del contenedor */
+  height: 150px; /* Alto deseado del contenedor */
+  overflow: hidden; /* Oculta la parte de la imagen que sobrepasa el contenedor */
+  position: relative; /* Necesario para el posicionamiento absoluto de la imagen */
+}
+
+.imagesep-container img {
+  position: absolute; /* Permite mover la imagen dentro del contenedor */
+  top: -280px; /* Ajusta la posición vertical */
+  left: -180px; /* Ajusta la posición horizontal */
+  width: auto;
+  height: auto;
+  max-width: none; /* Asegura que la imagen no se escale automáticamente */
+}
+
+.image-overlay {
+  position: absolute; /* Permite posicionar el encabezado dentro del contenedor */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  color: white; /* Color del texto */
 }
