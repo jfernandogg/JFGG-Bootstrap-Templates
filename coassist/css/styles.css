@@ -32,3 +32,13 @@
   background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
   color: white; /* Color del texto */
 }
+
+.blue-paths {
+  width: 100%; /* Ajusta este valor según tus necesidades */
+  height: 50px; /* Mantiene la proporción */
+}
+
+.blue-paths path {
+  fill: #000080; /* Azul oscuro */
+  stroke: #000080; /* Azul oscuro */
+}
