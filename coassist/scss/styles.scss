@@ -16,7 +16,7 @@
 .imagesep-container img {
     position: absolute; /* Permite mover la imagen dentro del contenedor */
     top: -280px; /* Ajusta la posición vertical */
-    left: -180px; /* Ajusta la posición horizontal */
+    left: 0px; /* Ajusta la posición horizontal */
     width: auto;
     height: auto;
     max-width: none; /* Asegura que la imagen no se escale automáticamente */
@@ -31,7 +31,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    background: rgba(0, 0, 0, 0.25); /* Fondo semi-transparente */
     color: white; /* Color del texto */
 }
 
