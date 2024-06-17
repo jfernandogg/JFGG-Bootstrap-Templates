@@ -47,3 +47,10 @@
   background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/coassist-seguros-fondo-1a.jpg") center center no-repeat;
   background-size: cover;
 }
+
+.confondo {
+  width: 1920px; /* o puedes especificar un ancho fijo si conoces el tamaño de la imagen */
+  height: 1080px; /* o puedes especificar una altura fija si conoces el tamaño de la imagen */
+  background: url("../images/optimizada3.jpg") center center no-repeat;
+  background-size: auto; /* mantiene el tamaño original de la imagen */
+}
