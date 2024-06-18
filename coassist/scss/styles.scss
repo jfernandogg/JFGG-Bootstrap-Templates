@@ -61,3 +61,18 @@
     background: url("../images/optimizada3.jpg") center center no-repeat;
     background-size: auto; /* mantiene el tamaño original de la imagen */
 }
+
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* Aspect ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }

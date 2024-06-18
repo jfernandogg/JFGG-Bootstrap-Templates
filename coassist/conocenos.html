@@ -31,8 +31,13 @@
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="#home">Inicio</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">Sobre Coassist</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#about" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sobre Coassist</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item">
+                    <a href="conocenos.html" class="nav-link">Conócenos</a>
+                  </li>
+                </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#nSS">Nuestros Seguros</a>
@@ -61,8 +66,8 @@
     <header class="container-fluid imagesep-container mt-7">
       <div class="row bg-primary">
         <div class="col text-center">
-          <h1 class="text-light" >TITULO</h1>
-          <p class="text-light">SubTitulo</p>
+          <h1 class="text-light" >Conócenos</h1>
+          <p class="text-light">Video Presentación</p>
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" class="blue-paths">
@@ -72,18 +77,17 @@
         <path d="M699.5 68.2a336.2 336.2 0 00-181-5.9c-2 .5 4.3 4.5 4.8 4.8 2 1.3 8 5.8 10.8 5.1A332.4 332.4 0 01713 77.6c3.8 1.2-1.4-3-2-3.3a41 41 0 00-11.5-6.1z"></path>
       </svg>
     </header>
-    <div class="row">
-      <div class="col text-center m-5">
-        <h5>Conocenos</h5>
-      </div>
-    </div>
 
     <div class="confondo container">
       <div class="row">
-        <div class="col text-center p-8">
-          <img class="p-5" src="images/LogoCoassist_400.png" />
+        <div class="col-12 text-center py-6">
+          <img class="" src="images/LogoCoassist_400.png" />
           <h1>Conócenos</h1>
-          <img class="p-5" src="images/nursinghome-home-iconplay2a.png" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center">
+          <a id="link" data-bs-toggle="modal" data-bs-target="#vidModal" href=""><img class="p-5" src="images/nursinghome-home-iconplay2a.png" /></a>
         </div>
       </div>
     </div>
@@ -110,8 +114,54 @@
         </div>
       </div>
     </footer>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="vidModal" tabindex="-1" aria-labelledby="vidModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-header">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="video-responsive">
+          <iframe 
+          width="100%" 
+          height="100%" 
+          src="https://www.youtube.com/embed/JTII6Gt0FS0" 
+          title="Sobre Coassist" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    // Obtener el iframe
+    var iframe = document.querySelector('iframe');
+    // Obtener la URL del video
+    var videoSrc = iframe.src;
+    // Evento que se dispara cuando el modal se abre
+    $('#vidModal').on('shown.bs.modal', function (e) {
+      // Cambiar la src del iframe para reproducir el video
+      iframe.src = videoSrc + "?autoplay=1";
+    })
+    // Evento que se dispara cuando el modal se cierra
+    $('#vidModal').on('hidden.bs.modal', function (e) {
+      // Cambiar la src del iframe para detener el video
+      iframe.src = videoSrc;
+    })
+  });
+  
+</script>
+
 </body>
 </html>
