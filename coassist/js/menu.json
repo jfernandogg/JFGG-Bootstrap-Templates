@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Inicio",
+        "link": "/"
+    },
+    {
+        "name": "Sobre Coassist",
+        "link": "conocenos.html",
+        "submenu": [
+            {
+                "name": "Conócenos",
+                "link": "conocenos.html"
+            },
+            {
+                "name": "Información Organizacional",
+                "link": "infoorg.html"
+            },
+            {
+                "name": "Nuestras politicas y SGI",
+                "link": "politicas.html"
+            }
+        ]
+    },
+    {
+        "name": "Nuestros Seguros",
+        "link": "#seguros"
+    },
+    {
+        "name": "Preguntas Frecuentes",
+        "link": "#faq"
+    },
+    {
+        "name": "Clientes Corporativos",
+        "link": "#ccorp"
+    },
+    {
+        "name": "Equipo COASSIST",
+        "link": "#equipo"
+    },
+    {
+        "name": "Contactenos",
+        "link": "#contact"
+    }
+]
