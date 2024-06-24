@@ -1,7 +1,7 @@
 [
     {
         "name": "Inicio",
-        "link": "/"
+        "link": "index.html"
     },
     {
         "name": "Sobre Coassist",
@@ -23,7 +23,19 @@
     },
     {
         "name": "Nuestros Seguros",
-        "link": "#seguros"
+        "link": "#seguros",
+        "submenu": [
+            {
+                "name": "Vida",
+                "link": "#Vida",
+                "submenu": [
+                    {
+                        "name": "Seguro Básico",
+                        "link": "01-seg-basico.html"
+                    }
+                ]
+            }
+        ]
     },
     {
         "name": "Preguntas Frecuentes",
