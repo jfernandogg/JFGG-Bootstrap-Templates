@@ -26,34 +26,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li class="dropdown">
-                  <a class="dropdown-item nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Something else here</a>
-                  <ul class="dropdown-menu shadow">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
+          <ul class="navbar-nav" id="menuItems"></ul>
 
           <span class="d-flex">
             <button class="btn btn-sm btn-primary me-2" type="button">
@@ -70,8 +43,8 @@
     <header class="container-fluid imagesep-container mt-7">
       <div class="row bg-primary">
         <div class="col text-center">
-          <h1 class="text-light">TITULO</h1>
-          <p class="text-light">SubTitulo</p>
+          <h1 class="text-light">Seguro Básico</h1>
+          <p class="text-light">Vida</p>
         </div>
       </div>
       <svg
@@ -98,7 +71,7 @@
     </header>
     <div class="row">
       <div class="col text-center m-5">
-        <h5>NOMBRE DEL PRODUCTO / DESCRIPCION PRODUCTO</h5>
+        <h5>Incapacidad total / Permanente o muerte por cualquier causa</h5>
       </div>
     </div>
 
@@ -108,7 +81,7 @@
           <img
             src="images/coassist-seguros-fondo-foto-26.jpg"
             width="100%"
-            class="rounded"
+            class="rounded-5"
           />
         </div>
         <div class="col col-xl-9">
@@ -123,7 +96,7 @@
                   aria-expanded="true"
                   aria-controls="collapseOne"
                 >
-                  Accordion Item #1
+                  Ventajas de asegurarte con COASSIT
                 </button>
               </h2>
               <div
@@ -132,15 +105,15 @@
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
-                  <strong>This is the first item's accordion body.</strong> It
-                  is shown by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
+                  <ul>
+                    <li>Obtener una prima económica sin importar la edad.</li>
+                    <li>Cubrir responsabilidades básicas (servicios públicos) de forma inmediata, asegurando el futuro.</li>
+                    <li>Asegurar algún miembro de la familia como: Padres, Hermano, Cónyuge o hijos.</li>
+                    <li>Recibir los pagos en caso de siniestro de forma oportuna.</li>
+                    <li>Estar amparado en caso de fallecimiento por cualquier causa.</li>
+                    <li>Facilidad en el pago de forma mensual y sin mayores costos adicionales.</li>
+                    <li>No tenemos cláusula de permanencia.</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -154,7 +127,7 @@
                   aria-expanded="false"
                   aria-controls="collapseTwo"
                 >
-                  Accordion Item #2
+                  Características de asegurarte con COASSIST
                 </button>
               </h2>
               <div
@@ -163,15 +136,15 @@
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
-                  <strong>This is the second item's accordion body.</strong> It
-                  is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
+                  <ul>
+                    <li>Edad de ingreso: Entre los 18-67 años de edad.</li>
+                    <li>Edad de permanencia: Hasta los 75 años y 364 días.</li>
+                    <li>Cobertura adicional por ITP (Incapacidad total y permanente)</li>
+                    <li>La adquisición es de forma voluntaria y bajo una declaración de asegurabilidad.</li>
+                    <li>Planes muy económicos con cobertura para todos los estratos socioeconómicos.</li>
+                    <li>El beneficiario puedes asignarlo como lo desees.</li>
+                    <li>Cada año la póliza se renovará automáticamente.</li>
+                  </ul>                  
                 </div>
               </div>
             </div>
@@ -185,7 +158,7 @@
                   aria-expanded="false"
                   aria-controls="collapseThree"
                 >
-                  Accordion Item #3
+                  Anexos
                 </button>
               </h2>
               <div
@@ -194,15 +167,18 @@
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It
-                  is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
+                  <a href="#link1" class="btn btn-secondary text-white p-3 my-2">
+                    Documentación necesaria en caso de siniestro <i class="fas fa-download"></i>
+                  </a><br/>
+                  <a href="#link1" class="btn btn-secondary text-white p-3">
+                    Formulario de reclamación por siniestro<i class="fas fa-download"></i>
+                  </a>
+                  <a href="#link1" class="btn btn-secondary text-white p-3">
+                    Clausulado <i class="fas fa-download"></i>
+                  </a><br/>
+                  <div class="my-4">
+                    <ul><li>Para conocer la póliza con los respectivos clausulados visita <a href="https://www.metlife.com.co" target="_blank">www.metlife.com.co</a></li></ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -239,6 +215,6 @@
     </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="js/script.js"></script> -->
+    <script src="js/script.js"></script>
   </body>
 </html>
