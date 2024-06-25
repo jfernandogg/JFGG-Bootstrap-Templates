@@ -34,6 +34,16 @@
                         "link": "01-seg-basico.html"
                     }
                 ]
+            },
+            {
+                "name": "Accidentes personales",
+                "link": "#accper",
+                "submenu": [
+                    {
+                        "name": "Enfermedades Graves",
+                        "link": "02-seg-enfgraves.html"
+                    }
+                ]
             }
         ]
     },
