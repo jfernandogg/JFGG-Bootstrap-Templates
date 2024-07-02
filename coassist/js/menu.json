@@ -42,8 +42,36 @@
                     {
                         "name": "Enfermedades Graves",
                         "link": "02-seg-enfgraves.html"
+                    },
+                    {
+                        "name": "Desempleo",
+                        "link": "03-seg-desempleo.html"
+                    },
+                    {
+                        "name": "Incapacidad Temporal",
+                        "link": "04-seg-incaptemp.html"
+                    },
+                    {
+                        "name": "Incapacidad Temporal",
+                        "link": "04-seg-incaptemp.html"
+                    },
+                    {
+                        "name": "Senior",
+                        "link": "05-seg-senior.html"
+                    },
+                    {
+                        "name": "Senior Premium",
+                        "link": "06-seg-seniorP.html"
                     }
-                ]
+                ] 
+            },
+            {
+                "name": "Planes Familiares",
+                "link": "#accper"
+            },
+            {
+                "name": "Productos 70/30",
+                "link": "#accper"
             }
         ]
     },
