@@ -78,16 +78,58 @@
                     {
                         "name": "Cancer",
                         "link": "10-seg-ap-cancer.html"
+                    },
+                    {
+                        "name": "Accidentes personales (Premium)",
+                        "link": "11-seg-ap-premium.html"
                     }
                 ] 
             },
             {
                 "name": "Planes Familiares",
-                "link": "#accper"
+                "link": "#accper",
+                "submenu": [
+                    {
+                        "name": "Hospitalización Familiar",
+                        "link": "#hospf"
+                    },
+                    {
+                        "name": "Vida Familiar",
+                        "link": "#vidaf"
+                    }
+                ]
             },
             {
                 "name": "Productos 70/30",
-                "link": "#accper"
+                "link": "#accper",
+                "submenu": [
+                    {
+                        "name": "Vida Total",
+                        "link": "#vidatotal"
+                    },
+                    {
+                        "name": "Vida Total Familiar",
+                        "link": "#vtf"
+                    },
+                    {
+                        "name": "Accidentes personales",
+                        "link": "#accpernales",
+                        "submenu": [
+                            {
+                                "name": "Adulto Mayor",
+                                "link": "#apam"
+                            },
+                            {
+                                "name": "Cobertura Total Accidental",
+                                "link": "#AMCTA"
+                            },
+                            {
+                                "name": "Cáncer Plus",
+                                "link": "#APCP"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },

@@ -31,14 +31,16 @@ function createMenuItem(item) {
         const ul = document.createElement('ul');
         ul.className = 'dropdown-menu submenu';
         ul.ariaLabelledby = a.id;
-
         item.submenu.forEach(subItem => {
             const subMenuItem = createMenuItem(subItem);
+            const hr = document.createElement('hr');
             ul.appendChild(subMenuItem);
+            ul.appendChild(hr);
         });
 
         li.appendChild(a);
         li.appendChild(ul);
+
     } else {
         console.log("No tiene submenu");
         const a = document.createElement('a');
