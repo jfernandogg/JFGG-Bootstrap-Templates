@@ -62,6 +62,22 @@
                     {
                         "name": "Senior Premium",
                         "link": "06-seg-seniorP.html"
+                    },
+                    {
+                        "name": "Amas de Casa",
+                        "link": "07-seg-amascasa.html"
+                    },
+                    {
+                        "name": "Hospitalización",
+                        "link": "08-seg-hospitalizacion.html"
+                    },
+                    {
+                        "name": "Accidentes personales (Reembolso)",
+                        "link": "09-seg-ap-reembolso.html"
+                    },
+                    {
+                        "name": "Cancer",
+                        "link": "10-seg-ap-cancer.html"
                     }
                 ] 
             },
