@@ -117,15 +117,15 @@
                         "submenu": [
                             {
                                 "name": "Adulto Mayor",
-                                "link": "#apam"
+                                "link": "16-seg-ap-am.html"
                             },
                             {
                                 "name": "Cobertura Total Accidental",
-                                "link": "#AMCTA"
+                                "link": "17-seg-ap-cta.html"
                             },
                             {
                                 "name": "Cáncer Plus",
-                                "link": "#APCP"
+                                "link": "18-seg-ap-cancerp.html"
                             }
                         ]
                     }
