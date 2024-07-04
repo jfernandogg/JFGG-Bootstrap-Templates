@@ -91,11 +91,11 @@
                 "submenu": [
                     {
                         "name": "Hospitalización Familiar",
-                        "link": "#hospf"
+                        "link": "12-seg-pf-hf.html"
                     },
                     {
                         "name": "Vida Familiar",
-                        "link": "#vidaf"
+                        "link": "13-seg-pf-vf.html"
                     }
                 ]
             },
@@ -105,11 +105,11 @@
                 "submenu": [
                     {
                         "name": "Vida Total",
-                        "link": "#vidatotal"
+                        "link": "14-seg-pf-vt.html"
                     },
                     {
                         "name": "Vida Total Familiar",
-                        "link": "#vtf"
+                        "link": "15-seg-vtf-vt.html"
                     },
                     {
                         "name": "Accidentes personales",
