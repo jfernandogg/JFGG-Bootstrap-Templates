@@ -135,11 +135,17 @@
     },
     {
         "name": "Preguntas Frecuentes",
-        "link": "#faq"
+        "link": "faq.html"
     },
     {
         "name": "Clientes Corporativos",
-        "link": "#ccorp"
+        "link": "#ccorp",
+        "submenu": [
+            {
+                "name": "BPO & Contact Center",
+                "link": "bpoccenter.html"
+            }
+        ]
     },
     {
         "name": "Equipo COASSIST",
