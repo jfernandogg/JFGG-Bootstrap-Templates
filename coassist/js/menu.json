@@ -148,12 +148,26 @@
             {
                 "name": "Linea Etica",
                 "link": "le.html"
+            },
+            {
+                "name": "Estudio de Mercado",
+                "link": "estudiomercado.html"
             }
         ]
     },
     {
         "name": "Equipo COASSIST",
-        "link": "#equipo"
+        "link": "#equipo",
+        "submenu": [
+            {
+                "name": "Nuestra Gente",
+                "link": "nuestragente.html"
+            },
+            {
+                "name": "Comprometidos Socialmente",
+                "link": "comprometidossoc.html"
+            }
+        ]
     },
     {
         "name": "Contactenos",
