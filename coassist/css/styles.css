@@ -43,6 +43,18 @@
   stroke: #000080; /* Azul oscuro */
 }
 
+.shape-fill {
+  width: 100%; /* Ajusta este valor según tus necesidades */
+  height: 50px; /* Mantiene la proporción */
+  fill: #b2c7d9;
+  stroke: #b2c7d9;
+  transform: scaleY(0.2) rotate(180deg) translate(-100%, -500%);
+}
+
+.barraprefondo {
+  background-color: #b2c7d9;
+}
+
 .footer-bg {
   background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/coassist-seguros-fondo-1a.jpg") center center no-repeat;
   background-size: cover;

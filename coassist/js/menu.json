@@ -166,11 +166,15 @@
             {
                 "name": "Comprometidos Socialmente",
                 "link": "comprometidossoc.html"
+            },
+            {
+                "name": "Trabaja con nosotros",
+                "link": "trabajaconnosotros.html"
             }
         ]
     },
     {
         "name": "Contactenos",
-        "link": "#contact"
+        "link": "contactenos.html"
     }
 ]
