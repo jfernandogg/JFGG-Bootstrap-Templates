@@ -5,13 +5,18 @@
   "main": "index.js",
   "scripts": {
     "sass:build": "sass --no-source-map scss:css",
-    "sass:watch": "sass --no-source-map --watch scss:css"
+    "sass:watch": "sass --no-source-map --watch scss:css",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   },
   "author": "Juan F Gallego",
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
+    "@vitejs/plugin-vue": "^5.0.5",
     "bootstrap": "^5.3.3",
-    "sass": "^1.75.0"
+    "sass": "^1.75.0",
+    "vite": "^5.3.4"
   }
 }
