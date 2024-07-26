@@ -105,37 +105,49 @@
 
 
     <!--Section showcase-->
-    <section class="detalles bg-light pt-5">
-    <div class="container-fluid">
-        <div class="row text-center ">
-            <div class="col-12 text-container" >
-                <h1>Nuestros Seguros</h1>
-            </div>
+    <section class="detalles bg-light pt-5 mb-3">
+      <div class="row text-center mb-3">
+        <div class="col-12 text-container" >
+            <h1>Nuestros Seguros</h1>
         </div>
-        <div class="prods row ms-5">
+      </div>
+    <div class="container-fluid">
+        <div class="prods row ms-8">
             <div class="col-12 col-xl-4 mb-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="./images/coassist-seguros-fondo-foto-24.jpg" class="card-img-top" alt="Accidentes Personales">
-                    <div class="card-body d-flex justify-content-center">
-                        <a href="#" class="btn btn-primary">Accidentes Personales</a>
-                    </div>
-                    </div>
+              <div class="card cardprod" style="width: 18rem;">
+                <img src="./images/coassist-seguros-fondo-foto-24.jpg" class="card-img-top" alt="Accidentes Personales">
+                <div class="card-body d-flex justify-content-center">
+                  <a href="02-seg-enfgraves.html" class="btn btn-primary">Accidentes Personales</a>
+                  <div class="text-over-image">
+                    <img src="images/broken-arm.png" alt="" style="width: 100%; height: auto;"> <!-- Ajusta el tamaño según sea necesario -->
+                    <p>Accidentes <b>Personales</b></p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="col-12 col-xl-4 mb-3">
-                <div class="card" style="width: 18rem;">
+                <div class="card cardprod" style="width: 18rem;">
                     <img src="./images/coassist-seguros-fondo-foto-25.jpg" class="card-img-top" alt="Planes Familiares">
                     <div class="card-body d-flex justify-content-center">
-                        <a href="#" class="btn btn-primary">Planes Familiares</a>
+                        <a href="12-seg-pf-hf.html" class="btn btn-primary">Planes Familiares</a>
+                        <div class="text-over-image">
+                          <img src="images/family.png" alt="" style="width: 100%; height: auto;" />
+                          <p>Planes <b>Familiares</b></p>
+                        </div>
                     </div>
                     </div>
             </div>
 
             <div class="col-12 col-xl-4 mb-3">
-                <div class="card" style="width: 18rem;">
+                <div class="card cardprod" style="width: 18rem;">
                     <img src="./images/coassist-seguros-fondo-foto-26.jpg" class="card-img-top" alt="Seguros Vida">
                     <div class="card-body d-flex justify-content-center">
-                        <a href="#" class="btn btn-primary">Seguros Vida</a>
+                        <a href="14-seg-pf-vt.html" class="btn btn-primary">Seguros Vida</a>
+                        <div class="text-over-image">
+                          <img src="images/medieval-house.png" style="width: 100%; height:auto;" alt="" />
+                          <p>Vida</p>
+                        </div>
                     </div>
                     </div>
             </div>
@@ -263,17 +275,17 @@
     </section>
 
     <!-- Pie de pagina-->
-    <footer class="footer-bg mt-4 p-4 ">
-      <div class="row g-0 text-white  d-flex justify-content-center">
+    <footer class="footer-bg mt-4 p-4">
+      <div class="row ms-8 g-0 text-white">
         <div class="col-xl-4 col-12 p-2">
           <i class="fa-regular fa-envelope"></i>
           <b>Escribenos:</b><br/>
-          <a href="mailto:servicioalcliente@coassist.com.co">servicioalcliente@coassist.com.co</a>
+          <a href="mailto:servicioalcliente@coassist.com.co" class="text-cyan" class="text-cyan">servicioalcliente@coassist.com.co</a>
         </div>
         <div class="col-xl-4 col-12 p-2">
           <i class="fa-regular fa-phone-volume"></i>
           <b>Llamanos:</b><br/>
-          <p><a href="sip:6044443838">6044443838</a></p>
+          <p><a  class="text-cyan" href="sip:6044443838" class="text-cyan">6044443838</a></p>
         </div>
         <div class="col-xl-4 col-12 p-2">
           <i class="fa-solid fa-location-dot"></i>
@@ -281,6 +293,14 @@
           <p>COASSIST LTDA. <br/>
             Carrera 65 # 8B-91 <br/>
             Medellín, Colombia</p>
+        </div>
+      </div>
+      <div class="row g-0 text-white text-center"> 
+        <div class="col">
+          © 2018 Coassist. Todos los derechos reservados. I 
+          <a href="public/pdfs/20210908_Política-Privacidad-y-Tratamiento-Datos-Personales_202103.pdf" target="_blank" class="text-cyan">
+            Politica de tratamiento de datos personales
+          </a>
         </div>
       </div>
     </footer>

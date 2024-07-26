@@ -12,6 +12,52 @@
   background: #fbf9f5;
 }
 
+.card.cardprod {
+  position: relative;
+  overflow: hidden; /* Asegura que los elementos hijos no se desborden */
+}
+
+.card.cardprod img.card-img-top {
+  width: 100%; /* Asegura que la imagen de fondo ocupe todo el ancho del card */
+}
+
+.card.cardprod::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0); /* Fondo transparente por defecto */
+  transition: background 0.5s; /* Transición para suavizar el cambio de brillo */
+  z-index: 1; /* Asegura que la capa esté sobre la imagen pero debajo del texto */
+}
+
+.card.cardprod:hover::before {
+  background: rgba(0, 0, 0, 0.5); /* Oscurece la imagen de fondo */
+}
+
+.card.cardprod .text-over-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Color del texto */
+  opacity: 0; /* Oculta el texto por defecto */
+  transition: opacity 0.5s; /* Transición para mostrar el texto */
+  z-index: 2; /* Asegura que el texto esté sobre la capa de oscurecimiento */
+  text-align: center; /* Centra el texto y la imagen */
+}
+
+.card.cardprod:hover .text-over-image {
+  opacity: 1; /* Muestra el texto al pasar el mouse */
+}
+
+.card.cardprod .card-body a.btn {
+  position: relative;
+  z-index: 3; /* Asegura que el botón esté por encima de la capa de oscurecimiento */
+}
+
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors

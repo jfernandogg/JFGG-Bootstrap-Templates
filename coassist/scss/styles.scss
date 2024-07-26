@@ -89,6 +89,10 @@
     height: 100%;
   }
 
+  .text-cyan {
+    color: cyan;
+  }
+
   /* ============ desktop view ============ */
 @media all and (min-width: 992px) {
 	.dropdown-menu li{ position: relative; 	}
