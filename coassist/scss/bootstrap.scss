@@ -51,7 +51,7 @@ $headings-font-weight: bold;
 @media only screen and (min-width: 1200px) {
   .navbar .navbar-nav .nav-item .nav-link {
     padding: 0 0.3em; /* Espaciado entre elementos */
-    font-size: 6;
+    font-size: 14px;
   }
   .navbar .navbar-nav .nav-item:not(:last-child) .nav-link {
     border-right: 1px solid #0000002a; /* Línea vertical */
