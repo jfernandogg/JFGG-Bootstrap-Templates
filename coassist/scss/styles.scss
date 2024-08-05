@@ -93,6 +93,13 @@
     color: cyan;
   }
 
+  .carousel-caption-transparent {
+    background-color: rgba(0, 0, 0, 0.3); // Fondo oscuro con 50% de opacidad
+    color: #fff; // Texto blanco
+    padding: 10px; // Ajusta el padding según tus necesidades
+    border-radius: 10px; // Ajusta el radio de borde según tus necesidades
+  }
+
   /* ============ desktop view ============ */
 @media all and (min-width: 992px) {
 	.dropdown-menu li{ position: relative; 	}
