@@ -1,6 +1,24 @@
 <?php
-// Configurar CORS
-header("Access-Control-Allow-Origin: http://localhost");
+// Configurar CORS de manera más flexible
+$allowed_origins = [
+    'https://coassist.com.co',
+    'https://www.coassist.com.co',
+    'http://coassist.com.co',
+    'http://www.coassist.com.co',
+    'http://localhost:8080',
+    'http://172.16.111.6:8080',
+    'http://desarrollo.coassist.com.co:8080',
+    'http://desarrollo.coassist.com.co'
+];
+
+$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+
+if (in_array($origin, $allowed_origins)) {
+    header("Access-Control-Allow-Origin: $origin");
+} else {
+    header("Access-Control-Allow-Origin: https://coassist.com.co");
+}
+
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
 
