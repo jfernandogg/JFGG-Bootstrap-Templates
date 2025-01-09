@@ -2,9 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 
 $primary: #443e44;
+
 body {
-    background-color: $primary;
+    background-color: $primary; padding-top: 180px;
 }
+
 
 .quieness {
     background: url('../images/fantasy-7668136_1280.jpg') no-repeat center center;

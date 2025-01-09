@@ -33,6 +33,21 @@ $line-height-base: 1.7;
 $navbar-nav-link-padding-x: 0.8rem;
 $navbar-padding-y: 1rem;
 $navbar-dark-color: $primary;
+.navbar {
+  z-index: 1030; /* Asegura que el navbar esté siempre por encima del contenido */
+  background-color: $light;
+  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Agrega un sutil efecto de sombra (opcional)
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: $primary; // Color del texto para las opciones del menú
+  &:hover {
+    color: #000; // Color al pasar el mouse
+  }
+}
+
+$navbar-bg-color: $primary; // Cambia a tu color de fondo preferido
+$navbar-light-bg: $navbar-bg-color; // Asegura que el fondo claro del navbar coincida
 
 // Buttons
 $button-radius: 50px;
