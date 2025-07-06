@@ -7,17 +7,27 @@
     <link rel="stylesheet" href="css/fontawesome.css" />
     <link rel="stylesheet" href="css/bootstrap.css" />
     <title>Marikaditas Literarias</title>
+    <!-- CDN Animate.css para animaciones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
-<body class="text-secondary">
+<body class="text-secondary" id="top">
 
     <!--NAVBAR-->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
-        <div class="container">
+        <div class="container d-flex align-items-center justify-content-between">
           <a href="index.html" class="navbar-brand">
             <img src="images/Recurso 1.png" alt="" width="150" />
           </a>
+          <!-- Ícono de carrito SIEMPRE visible -->
+          <span class="nav-item ms-auto me-3 order-lg-2">
+            <span class="fa-stack position-relative" style="cursor:pointer" data-bs-toggle="modal" data-bs-target="#modalCarrito">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fas fa-shopping-cart fa-stack-1x text-white"></i>
+              <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger animate__animated" style="font-size:0.7rem;">0</span>
+            </span>
+          </span>
           <button 
-            class="navbar-toggler" 
+            class="navbar-toggler order-lg-3" 
             type="button" 
             data-bs-toggle="collapse"
             data-bs-target="#navbarNavDropdown"
@@ -27,10 +37,10 @@
           />
           <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <div class="collapse navbar-collapse order-lg-1" id="navbarNavDropdown">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#home">Home</a>
+                <a class="nav-link" aria-current="page" href="#top">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#productos">Productos</a>
@@ -42,7 +52,7 @@
                 <a class="nav-link" href="#suscribe">Suscribete</a>
               </li>
             </ul>
-            <span class="nav-item">
+            <span class="nav-item d-none d-lg-inline-block ms-2">
               <span class="fa-stack">
                 <a href="#">
                   <i class="fas fa-circle fa-stack-2x"></i>
@@ -50,7 +60,7 @@
                 </a>
               </span>
             </span>
-            <span class="nav-item">
+            <span class="nav-item d-none d-lg-inline-block">
               <span class="fa-stack">
                 <a href="#">
                   <i class="fas fa-circle fa-stack-2x"></i>
@@ -85,7 +95,7 @@
             <p class="card-text">Descubre la magia literaria en cada caja.</p>
           </div>
           <div class="card-body d-flex justify-content-between">
-            <a href="#" class="btn btn-info">Comprar</a>
+            <button class="btn btn-info add-to-cart" data-nombre="Cajita Mágica" data-precio="20.00">Comprar</button>
             <a href="#" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalDetalles1">Detalles</a>
           </div>
         </div>
@@ -106,7 +116,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-              <a href="#" class="btn btn-info">Comprar</a>
+              <button class="btn btn-info add-to-cart" data-nombre="Cajita Mágica" data-precio="20.00">Comprar</button>
             </div>
           </div>
         </div>
@@ -121,7 +131,7 @@
             <p class="card-text">Para los amantes del gótico.</p>
           </div>
           <div class="card-body d-flex justify-content-between">
-            <a href="#" class="btn btn-info">Comprar</a>
+            <button class="btn btn-info add-to-cart" data-nombre="Cajita Vampiros" data-precio="25.00">Comprar</button>
             <a href="#" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalDetalles2">Detalles</a>
           </div>
         </div>
@@ -142,7 +152,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-              <a href="#" class="btn btn-info">Comprar</a>
+              <button class="btn btn-info add-to-cart" data-nombre="Cajita Vampiros" data-precio="25.00">Comprar</button>
             </div>
           </div>
         </div>
@@ -157,7 +167,7 @@
             <p class="card-text">Celebrando la diversidad literaria.</p>
           </div>
           <div class="card-body d-flex justify-content-between">
-            <a href="#" class="btn btn-info">Comprar</a>
+            <button class="btn btn-info add-to-cart" data-nombre="Cajita Diversa" data-precio="30.00">Comprar</button>
             <a href="#" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalDetalles3">Detalles</a>
           </div>
         </div>
@@ -178,7 +188,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-              <a href="#" class="btn btn-info">Comprar</a>
+              <button class="btn btn-info add-to-cart" data-nombre="Cajita Diversa" data-precio="30.00">Comprar</button>
             </div>
           </div>
         </div>
@@ -193,7 +203,7 @@
             <p class="card-text">Un viaje a través de la literatura.</p>
           </div>
           <div class="card-body d-flex justify-content-between">
-            <a href="#" class="btn btn-info">Comprar</a>
+            <button class="btn btn-info add-to-cart" data-nombre="Cajita Viajera" data-precio="35.00">Comprar</button>
             <a href="#" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalDetalles4">Detalles</a>
           </div>
         </div>
@@ -214,7 +224,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-              <a href="#" class="btn btn-info">Comprar</a>
+              <button class="btn btn-info add-to-cart" data-nombre="Cajita Viajera" data-precio="35.00">Comprar</button>
             </div>
           </div>
         </div>
@@ -308,7 +318,96 @@
     </div>
   </footer>
 
+    <!-- Modal Carrito de Compras -->
+    <div class="modal fade" id="modalCarrito" tabindex="-1" aria-labelledby="modalCarritoLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalCarritoLabel">Carrito de Compras</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ul id="cart-items" class="list-group mb-3"></ul>
+            <p class="fw-bold">Total: $<span id="cart-total">0.00</span></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-info" id="checkout-btn">Finalizar compra</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <!-- Script para el carrito -->
+    <script>
+      const cart = [];
+      function updateCartCount() {
+        document.getElementById('cart-count').textContent = cart.reduce((acc, item) => acc + item.cantidad, 0);
+      }
+      function updateCartModal() {
+        const cartItems = document.getElementById('cart-items');
+        cartItems.innerHTML = '';
+        let total = 0;
+        cart.forEach((item, idx) => {
+          total += item.precio * item.cantidad;
+          const li = document.createElement('li');
+          li.className = 'list-group-item d-flex justify-content-between align-items-center';
+          li.innerHTML = `
+            <span>${item.nombre} x${item.cantidad}</span>
+            <span>$${(item.precio * item.cantidad).toFixed(2)} <button class='btn btn-sm btn-danger ms-2 remove-one' data-idx='${idx}'>&minus;</button></span>
+          `;
+          cartItems.appendChild(li);
+        });
+        document.getElementById('cart-total').textContent = total.toFixed(2);
+      }
+      function animateCartBadge() {
+        const badge = document.getElementById('cart-count');
+        badge.classList.remove('animate__bounce');
+        void badge.offsetWidth; // trigger reflow
+        badge.classList.add('animate__bounce');
+        setTimeout(() => badge.classList.remove('animate__bounce'), 700);
+      }
+      // Eliminar solo uno del producto
+      function removeOneFromCart(idx) {
+        if (cart[idx].cantidad > 1) {
+          cart[idx].cantidad -= 1;
+        } else {
+          cart.splice(idx, 1);
+        }
+        updateCartCount();
+        updateCartModal();
+      }
+      // Solo delegación de eventos para agregar y quitar
+      document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('add-to-cart')) {
+          const nombre = e.target.getAttribute('data-nombre');
+          const precio = parseFloat(e.target.getAttribute('data-precio'));
+          const found = cart.find(item => item.nombre === nombre);
+          if (found) {
+            found.cantidad += 1;
+          } else {
+            cart.push({ nombre, precio, cantidad: 1 });
+          }
+          updateCartCount();
+          updateCartModal();
+          animateCartBadge();
+        }
+        if (e.target.classList.contains('remove-one')) {
+          const idx = parseInt(e.target.getAttribute('data-idx'));
+          removeOneFromCart(idx);
+        }
+      });
+      // Inicializar modal al abrir
+      document.getElementById('modalCarrito').addEventListener('show.bs.modal', updateCartModal);
+      // Botón de checkout (puedes personalizar la acción)
+      document.getElementById('checkout-btn').addEventListener('click', function() {
+        alert('¡Gracias por tu compra! (Funcionalidad de pago no implementada)');
+        cart.length = 0;
+        updateCartCount();
+        updateCartModal();
+      });
+    </script>
 </body>
 </html>
