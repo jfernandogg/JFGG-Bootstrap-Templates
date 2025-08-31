@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "titulo": "Cajita Mágica",
+    "subtitulo": "Descubre la magia literaria en cada caja.",
+    "detalle": "Estos elementos mágicos nos pueden ayudar a sobrellevar tu mundo “mogol”, para que este se llene de alegría, creatividad e ingenio, cualidades de las magas y magos. encontrarás una camiseta oversize en tallas S, M y XL, un pocillo impreso, un cuaderno tipo agenda, unos separadores de libros y unos stickers. todo conservando la temática de la caja.",
+    "precio": 20.00,
+    "imagen": [
+      "images/magia-foto.jpeg",
+      "images/vampiro.jpeg",
+      "images/diversidad.jpeg"
+    ]
+  },
+  {
+    "id": 2,
+    "titulo": "Cajita Vampiros",
+    "subtitulo": "Para los amantes del gótico.",
+    "detalle": "Una colección de objetos oscuros y seductores inspirados en las criaturas de la noche. Perfecta para quienes disfrutan de las historias de vampiros y el romance gótico.",
+    "precio": 25.00,
+    "imagen": [
+      "images/vampiro.jpeg"
+    ]
+  },
+  {
+    "id": 3,
+    "titulo": "Cajita Diversa",
+    "subtitulo": "Celebrando la diversidad literaria.",
+    "detalle": "Explora diferentes voces y perspectivas con esta caja inclusiva y enriquecedora. Un homenaje a la pluralidad de historias que merecen ser contadas.",
+    "precio": 30.00,
+    "imagen": []
+  },
+  {
+    "id": 4,
+    "titulo": "Cajita Viajera",
+    "subtitulo": "Un viaje a través de la literatura.",
+    "detalle": "Los viajes siempre son un motivo de felicidad y aprendizaje, pero se hacen únicos cuando los acompañas de elementos que marcan esa historia, por eso te presentamos esta caja literaria compuesta por: una camiseta ovesize en tallas S, M y XL, un pocillo impreso, un cuaderno tipo agenda, unos separadores de libros y unos stickers. todo conservando la tematica de viajes.",
+    "precio": 35.00,
+    "imagen": [
+      "images/cajitaviajera.jpeg",
+      "images/magia-foto.jpeg"
+    ]
+  }
+]
