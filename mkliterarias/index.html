@@ -143,12 +143,14 @@
     <div class="row">
       <div class="col m-5">
         <h5>Suscribete</h5>
-        <form>
+        <form id="suscribe-form" autocomplete="off">
           <div class="mb-5">
             <input type="email" 
               class="form-control bg-transparent border-top-0 border-start-0 border-end-0 rounded-0 border-muted text-white"
-              placeholder="Email" />
+              placeholder="Email" name="email" id="suscribe-email" required />
           </div>
+          <button type="submit" class="btn btn-info">Suscribirme</button>
+          <div id="suscribe-msg" class="mt-2"></div>
         </form>
       </div>
     </div>
@@ -189,6 +191,44 @@
           <div class="modal-body">
             <ul id="cart-items" class="list-group mb-3"></ul>
             <p class="fw-bold">Total: $<span id="cart-total">0.00</span></p>
+            <hr />
+            <form id="checkout-form">
+              <h6 class="mb-3">Datos personales</h6>
+              <div class="row">
+                <div class="col-12 col-md-6 mb-2">
+                  <label for="nombre_completo" class="form-label">Nombre completo *</label>
+                  <input type="text" class="form-control" id="nombre_completo" name="nombre_completo" required />
+                </div>
+                <div class="col-12 col-md-6 mb-2">
+                  <label for="correo" class="form-label">Correo electrónico *</label>
+                  <input type="email" class="form-control" id="correo" name="correo" required />
+                </div>
+                <div class="col-12 col-md-6 mb-2">
+                  <label for="telefono" class="form-label">Teléfono *</label>
+                  <input type="text" class="form-control" id="telefono" name="telefono" required />
+                </div>
+                <div class="col-12 col-md-6 mb-2">
+                  <label for="direccion" class="form-label">Dirección</label>
+                  <input type="text" class="form-control" id="direccion" name="direccion" />
+                </div>
+                <div class="col-12 col-md-6 mb-2">
+                  <label for="ciudad" class="form-label">Ciudad</label>
+                  <input type="text" class="form-control" id="ciudad" name="ciudad" />
+                </div>
+                <div class="col-12 col-md-6 mb-2">
+                  <label for="estado" class="form-label">Estado</label>
+                  <input type="text" class="form-control" id="estado" name="estado" />
+                </div>
+                <div class="col-12 col-md-6 mb-2">
+                  <label for="pais" class="form-label">País</label>
+                  <input type="text" class="form-control" id="pais" name="pais" />
+                </div>
+                <div class="col-12 col-md-6 mb-2">
+                  <label for="codigo_postal" class="form-label">Código Postal</label>
+                  <input type="text" class="form-control" id="codigo_postal" name="codigo_postal" />
+                </div>
+              </div>
+            </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -224,15 +264,17 @@
               const cardCol = document.createElement('div');
               cardCol.className = 'col-12 col-sm-6 col-md-4 col-lg-3 d-flex';
               cardCol.innerHTML = `
-                <div class="card border-0 shadow-lg flex-fill">
+                <div class="card border-0 shadow-lg flex-fill d-flex flex-column h-100">
                   ${cardImageHtml}
                   <div class="card-body text-secondary">
                     <h5 class="card-title text-secondary">${producto.titulo}</h5>
                     <p class="card-text">${producto.subtitulo}</p>
                   </div>
-                  <div class="card-body d-flex justify-content-between">
-                    <button class="btn btn-info add-to-cart" data-id="${producto.id}" data-nombre="${producto.titulo}" data-precio="${producto.precio.toFixed(2)}">Comprar</button>
-                    <a href="#" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalDetalles${producto.id}">Detalles</a>
+                  <div class="card-body mt-auto">
+                    <div class="d-flex flex-column flex-md-row gap-2 justify-content-center align-items-stretch">
+                      <button class="btn btn-info flex-fill add-to-cart" data-id="${producto.id}" data-nombre="${producto.titulo}" data-precio="${producto.precio.toFixed(2)}">Comprar</button>
+                      <a href="#" class="btn btn-info flex-fill" data-bs-toggle="modal" data-bs-target="#modalDetalles${producto.id}">Detalles</a>
+                    </div>
                   </div>
                 </div>
               `;
@@ -304,6 +346,47 @@
           });
       });
     </script>
+    <!-- Script para suscripción -->
+    <script>
+      document.getElementById('suscribe-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const emailInput = document.getElementById('suscribe-email');
+        const msgDiv = document.getElementById('suscribe-msg');
+        const email = emailInput.value.trim();
+        msgDiv.textContent = '';
+        if (!email) {
+          msgDiv.textContent = 'Por favor ingresa tu email.';
+          msgDiv.className = 'mt-2 text-danger';
+          return;
+        }
+        emailInput.disabled = true;
+        msgDiv.textContent = 'Enviando...';
+        msgDiv.className = 'mt-2 text-secondary';
+        fetch('suscribete.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email })
+        })
+        .then(r => r.json())
+        .then(data => {
+          if (data.status === 'success') {
+            msgDiv.textContent = data.message;
+            msgDiv.className = 'mt-2 text-success';
+            emailInput.value = '';
+          } else {
+            msgDiv.textContent = data.message || 'Error al suscribirse.';
+            msgDiv.className = 'mt-2 text-danger';
+          }
+        })
+        .catch(() => {
+          msgDiv.textContent = 'Error de conexión.';
+          msgDiv.className = 'mt-2 text-danger';
+        })
+        .finally(() => {
+          emailInput.disabled = false;
+        });
+      });
+    </script>
     <!-- Script para el carrito -->
     <script>
       const cart = [];
@@ -367,9 +450,27 @@
       // Inicializar modal al abrir
       document.getElementById('modalCarrito').addEventListener('show.bs.modal', updateCartModal);
       
-      // Botón de checkout con envío a PHP
+      // Botón de checkout con envío a PHP y datos personales
       document.getElementById('checkout-btn').addEventListener('click', function(e) {
         const checkoutButton = e.target;
+        const form = document.getElementById('checkout-form');
+        // Validación manual para mostrar mensajes nativos
+        if (!form.reportValidity()) {
+          return;
+        }
+        // Obtener datos del formulario
+        const formData = new FormData(form);
+        const datosPersonales = {
+          nombre_completo: formData.get('nombre_completo') || '',
+          correo: formData.get('correo') || '',
+          telefono: formData.get('telefono') || '',
+          direccion: formData.get('direccion') || '',
+          ciudad: formData.get('ciudad') || '',
+          estado: formData.get('estado') || '',
+          pais: formData.get('pais') || '',
+          codigo_postal: formData.get('codigo_postal') || ''
+        };
+
         checkoutButton.disabled = true;
         checkoutButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando...';
 
@@ -378,7 +479,10 @@
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ cart: cart })
+          body: JSON.stringify({
+            cart: cart,
+            ...datosPersonales
+          })
         })
         .then(response => response.json().then(data => ({ok: response.ok, status: response.status, data})))
         .then(({ok, status, data}) => {
@@ -387,6 +491,7 @@
             cart.length = 0; // Vaciar el carrito
             updateCartCount();
             updateCartModal();
+            document.getElementById('checkout-form').reset();
             bootstrap.Modal.getInstance(document.getElementById('modalCarrito')).hide();
           } else {
             alert(`Error: ${data.message || 'Ocurrió un problema al enviar el pedido.'}`);

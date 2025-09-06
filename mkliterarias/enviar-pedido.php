@@ -33,6 +33,38 @@ if ($datos_cliente === null || !isset($datos_cliente['cart']) || !is_array($dato
     enviar_error("Datos del carrito inválidos o vacíos.");
 }
 
+
+// --- CAPA 2.1: VALIDACIÓN DE DATOS PERSONALES ---
+$campos_personales = [
+    'nombre_completo' => [true, 'Nombre completo'],
+    'correo' => [true, 'Correo electrónico'],
+    'telefono' => [true, 'Teléfono'],
+    'direccion' => [false, 'Dirección'],
+    'ciudad' => [false, 'Ciudad'],
+    'estado' => [false, 'Estado'],
+    'pais' => [false, 'País'],
+    'codigo_postal' => [false, 'Código Postal']
+];
+
+$datos_personales = [];
+foreach ($campos_personales as $campo => [$obligatorio, $nombre_legible]) {
+    if ($obligatorio && (empty($datos_cliente[$campo]) || !is_string($datos_cliente[$campo]))) {
+        enviar_error("El campo '$nombre_legible' es obligatorio.");
+    }
+    $valor = isset($datos_cliente[$campo]) ? trim($datos_cliente[$campo]) : '';
+    $datos_personales[$campo] = $valor;
+}
+
+// Validación básica de email
+if (!filter_var($datos_personales['correo'], FILTER_VALIDATE_EMAIL)) {
+    enviar_error("El correo electrónico no es válido.");
+}
+
+// Validación básica de teléfono (solo dígitos, espacios, +, -, paréntesis)
+if (!preg_match('/^[\d\s\-\+\(\)]+$/', $datos_personales['telefono'])) {
+    enviar_error("El teléfono contiene caracteres no válidos.");
+}
+
 $carrito_cliente = $datos_cliente['cart'];
 
 // --- CAPA 3: VALIDACIÓN DEL LADO DEL SERVIDOR (Precios y Productos) ---
@@ -88,22 +120,32 @@ if (empty($carrito_validado)) {
 }
 
 // --- CAPA 4: CONSTRUCCIÓN Y SANEAMIENTO DEL EMAIL ---
+
 $cuerpo_email = "<h1>Nuevo Pedido Recibido</h1>";
-$cuerpo_email .= "<p>Se ha realizado un nuevo pedido a través del sitio web:</p>";
+$cuerpo_email .= "<p>Se ha realizado un nuevo pedido a través del sitio web. <br><strong>Datos del cliente:</strong></p>";
+$cuerpo_email .= "<ul>";
+$cuerpo_email .= "<li><strong>Nombre completo:</strong> " . htmlspecialchars($datos_personales['nombre_completo']) . "</li>";
+$cuerpo_email .= "<li><strong>Correo electrónico:</strong> " . htmlspecialchars($datos_personales['correo']) . "</li>";
+$cuerpo_email .= "<li><strong>Teléfono:</strong> " . htmlspecialchars($datos_personales['telefono']) . "</li>";
+if ($datos_personales['direccion']) $cuerpo_email .= "<li><strong>Dirección:</strong> " . htmlspecialchars($datos_personales['direccion']) . "</li>";
+if ($datos_personales['ciudad']) $cuerpo_email .= "<li><strong>Ciudad:</strong> " . htmlspecialchars($datos_personales['ciudad']) . "</li>";
+if ($datos_personales['estado']) $cuerpo_email .= "<li><strong>Estado:</strong> " . htmlspecialchars($datos_personales['estado']) . "</li>";
+if ($datos_personales['pais']) $cuerpo_email .= "<li><strong>País:</strong> " . htmlspecialchars($datos_personales['pais']) . "</li>";
+if ($datos_personales['codigo_postal']) $cuerpo_email .= "<li><strong>Código Postal:</strong> " . htmlspecialchars($datos_personales['codigo_postal']) . "</li>";
+$cuerpo_email .= "</ul>";
+
+$cuerpo_email .= "<h2>Detalle del pedido</h2>";
 $cuerpo_email .= "<table border='1' cellpadding='10' cellspacing='0' style='width:100%; border-collapse: collapse;'>";
 $cuerpo_email .= "<thead><tr style='background-color:#f2f2f2;'><th>Producto</th><th>Cantidad</th><th>Precio Unitario</th><th>Subtotal</th></tr></thead>";
 $cuerpo_email .= "<tbody>";
-
 foreach ($carrito_validado as $item) {
     $cuerpo_email .= "<tr>";
-    // Saneamiento con htmlspecialchars para prevenir XSS
     $cuerpo_email .= "<td>" . htmlspecialchars($item['nombre']) . "</td>";
     $cuerpo_email .= "<td>" . $item['cantidad'] . "</td>";
     $cuerpo_email .= "<td>$" . number_format($item['precio_unitario'], 2) . "</td>";
     $cuerpo_email .= "<td>$" . number_format($item['subtotal'], 2) . "</td>";
     $cuerpo_email .= "</tr>";
 }
-
 $cuerpo_email .= "</tbody><tfoot><tr><td colspan='3' style='text-align:right; font-weight:bold;'>Total General:</td><td style='font-weight:bold;'>$" . number_format($total_general, 2) . "</td></tr></tfoot>";
 $cuerpo_email .= "</table>";
 
