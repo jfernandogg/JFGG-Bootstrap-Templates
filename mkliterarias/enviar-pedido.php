@@ -2,7 +2,7 @@
 session_start();
 
 // --- CONFIGURACIÓN ---
-$email_destinatario = "tu-correo@tudominio.com"; // Reemplaza con tu correo
+$email_destinatario = "ventas@marikaditasliterarias.com"; // Reemplaza con tu correo
 $asunto_email = "Nuevo Pedido desde Marikaditas Literarias";
 $limite_tiempo_envio = 30; // Segundos mínimos entre pedidos para un mismo usuario
 
@@ -110,7 +110,7 @@ $cuerpo_email .= "</table>";
 // Cabeceras del correo (Prevención de Inyección de Cabeceras)
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-$headers .= 'From: <pedidos@marikaditasliterarias.com>' . "\r\n"; // Usar un remitente fijo
+$headers .= 'From: <ventas@marikaditasliterarias.com>' . "\r\n"; // Usar un remitente fijo
 
 // --- ENVÍO Y RESPUESTA FINAL ---
 if (mail($email_destinatario, $asunto_email, $cuerpo_email, $headers)) {
