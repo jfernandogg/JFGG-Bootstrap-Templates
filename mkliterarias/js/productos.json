@@ -6,16 +6,16 @@
     "detalle": "Estos elementos mágicos nos pueden ayudar a sobrellevar tu mundo “mogol”, para que este se llene de alegría, creatividad e ingenio, cualidades de las magas y magos. encontrarás una camiseta oversize en tallas S, M y XL, un pocillo impreso, un cuaderno tipo agenda, unos separadores de libros y unos stickers. todo conservando la temática de la caja.",
     "precio": 140000,
     "imagen": [
-      "images/harrypoter/edicion.png",
-      "images/harrypoter/camisa1.png",
-      "images/harrypoter/camisa2.png",
-      "images/harrypoter/cartas.png",
-      "images/harrypoter/cuaderno.png",
-      "images/harrypoter/expectrocup.png",
-      "images/harrypoter/lenscup.png",
-      "images/harrypoter/manillas.png",
-      "images/harrypoter/manillas2.png",
-      "images/harrypoter/manillas3.png"
+      "images/harrypoter/edicion.jpg",
+      "images/harrypoter/camisa1.jpg",
+      "images/harrypoter/camisa2.jpg",
+      "images/harrypoter/cartas.jpg",
+      "images/harrypoter/cuaderno.jpg",
+      "images/harrypoter/expectrocup.jpg",
+      "images/harrypoter/lenscup.jpg",
+      "images/harrypoter/manillas.jpg",
+      "images/harrypoter/manillas2.jpg",
+      "images/harrypoter/manillas3.jpg"
     ]
   },
   {
@@ -25,13 +25,13 @@
     "detalle": "Una colección de objetos oscuros y seductores inspirados en las criaturas de la noche. Perfecta para quienes disfrutan de las historias de vampiros y el romance gótico.",
     "precio": 140000,
     "imagen": [
-      "images/vampiros/IMG_2388.png",
-      "images/vampiros/IMG_2335.png",
-      "images/vampiros/IMG_2336.png",
-      "images/vampiros/IMG_2348.png",
-      "images/vampiros/IMG_2352.png",
-      "images/vampiros/IMG_2362.png",
-      "images/vampiros/IMG_2371.png"
+      "images/vampiros/IMG_2388.jpg",
+      "images/vampiros/IMG_2335.jpg",
+      "images/vampiros/IMG_2336.jpg",
+      "images/vampiros/IMG_2348.jpg",
+      "images/vampiros/IMG_2352.jpg",
+      "images/vampiros/IMG_2362.jpg",
+      "images/vampiros/IMG_2371.jpg"
     ]
   },
   {
@@ -41,12 +41,12 @@
     "detalle": "Explora diferentes voces y perspectivas con esta caja inclusiva y enriquecedora. Un homenaje a la pluralidad de historias que merecen ser contadas.",
     "precio": 140000,
     "imagen": [
-      "images/diversa/IMG_2382.png",
-      "images/diversa/IMG_2349.png",
-      "images/diversa/IMG_2355.png",
-      "images/diversa/IMG_2356.png",
-      "images/diversa/IMG_2360.png",
-      "images/diversa/IMG_2368.png"
+      "images/diversa/IMG_2382.jpg",
+      "images/diversa/IMG_2349.jpg",
+      "images/diversa/IMG_2355.jpg",
+      "images/diversa/IMG_2356.jpg",
+      "images/diversa/IMG_2360.jpg",
+      "images/diversa/IMG_2368.jpg"
     ]
   },
   {
@@ -56,13 +56,13 @@
     "detalle": "Los viajes siempre son un motivo de felicidad y aprendizaje, pero se hacen únicos cuando los acompañas de elementos que marcan esa historia, por eso te presentamos esta caja literaria compuesta por: una camiseta ovesize en tallas S, M y XL, un pocillo impreso, un cuaderno tipo agenda, unos separadores de libros y unos stickers. todo conservando la tematica de viajes.",
     "precio": 140000,
     "imagen": [
-      "images/viajera/IMG_2387.png",
-      "images/viajera/IMG_2331.png",
-      "images/viajera/IMG_2332.png",
-      "images/viajera/IMG_2347.png",
-      "images/viajera/IMG_2354.png",
-      "images/viajera/IMG_2361.png",
-      "images/viajera/IMG_2366.png"
+      "images/viajera/IMG_2387.jpg",
+      "images/viajera/IMG_2331.jpg",
+      "images/viajera/IMG_2332.jpg",
+      "images/viajera/IMG_2347.jpg",
+      "images/viajera/IMG_2354.jpg",
+      "images/viajera/IMG_2361.jpg",
+      "images/viajera/IMG_2366.jpg"
     ]
   }
 ]
