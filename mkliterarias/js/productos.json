@@ -1,10 +1,9 @@
 [
   {
     "id": 1,
-    "titulo": "Cajita Mágica",
+    "titulo": "Caja Mágica",
     "subtitulo": "Descubre la magia literaria en cada caja.",
-    "detalle": "Estos elementos mágicos nos pueden ayudar a sobrellevar tu mundo “mogol”, para que este se llene de alegría, creatividad e ingenio, cualidades de las magas y magos. encontrarás una camiseta oversize en tallas S, M y XL, un pocillo impreso, un cuaderno tipo agenda, unos separadores de libros y unos stickers. todo conservando la temática de la caja.",
-    "precio": 140000,
+    "detalle": "Estos elementos mágicos nos ayudarán a sobrellevar el mundo \"mogol\" y llenarnos de alegría, creatividad e ingenio, cualidades de las magas y magos.\nEn el interior encontrarás:\n- Una camiseta oversize en tallas S, M y XL.\n- Un pocillo impreso.\n- Un cuaderno tipo agenda.\n- Unos separadores de libros, photcards y stickers.\nTodo gira alrededor de la magia que ofrece la caja.",
     "imagen": [
       "images/harrypoter/edicion.jpg",
       "images/harrypoter/camisa1.jpg",
@@ -20,9 +19,9 @@
   },
   {
     "id": 2,
-    "titulo": "Cajita Vampiros",
+    "titulo": "Caja Vampírica",
     "subtitulo": "Para los amantes de este genero literario gótico.",
-    "detalle": "Una colección de objetos oscuros y seductores inspirados en las criaturas de la noche. Perfecta para quienes disfrutan de las historias de vampiros y el romance gótico.",
+    "detalle": "Una colección de objetos oscuros y seductores inspirados en las criaturas de la noche.\nPerfecta para quienes disfrutan las historias de vampiros y del romance gótico.\nEn el interior encontrarás:\n- Una camiseta oversize en tallas S, M y XL.\n- Un pocillo impreso.\n- Un cuaderno tipo agenda.\n- Unos separadores de libros, photcards y stickers.\nTodo gira alrededor del submundo que ofrece la caja.",
     "precio": 140000,
     "imagen": [
       "images/vampiros/IMG_2388.jpg",
@@ -36,7 +35,7 @@
   },
   {
     "id": 3,
-    "titulo": "Cajita Diversa",
+    "titulo": "Caja Diversa",
     "subtitulo": "Celebrando la diversidad literaria.",
     "detalle": "Explora diferentes voces y perspectivas con esta caja inclusiva y enriquecedora. Un homenaje a la pluralidad de historias que merecen ser contadas.",
     "precio": 140000,
@@ -53,7 +52,7 @@
     "id": 4,
     "titulo": "Cajita Viajera",
     "subtitulo": "Un viaje a través de la literatura.",
-    "detalle": "Los viajes siempre son un motivo de felicidad y aprendizaje, pero se hacen únicos cuando los acompañas de elementos que marcan esa historia, por eso te presentamos esta caja literaria compuesta por: una camiseta ovesize en tallas S, M y XL, un pocillo impreso, un cuaderno tipo agenda, unos separadores de libros y unos stickers. todo conservando la tematica de viajes.",
+    "detalle": "Los viajes siempre son un motivo de felicidad y aprendizaje, pero se hacen únicos cuando los acompañas de elementos que marcan esa historia.\nPor eso te presentamos esta caja literaria que explora el mundo a través de los ojos de Julio Verne.\nEn el interior encontrarás:\n- Una camiseta oversize en tallas S, M y XL.\n- Un pocillo impreso.\n- Un cuaderno tipo agenda.\n- Unos separadores de libros, photcards y stickers.\nTodo gira alrededor de los viajes que ofrece la caja.",
     "precio": 140000,
     "imagen": [
       "images/viajera/IMG_2387.jpg",
