@@ -16,7 +16,7 @@
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
         <div class="container d-flex align-items-center justify-content-between">
           <a href="index.html" class="navbar-brand">
-            <img src="images/Recurso 1.png" alt="" width="150" />
+            <img src="images/Recurso 1.png?v=20250912" alt="" width="150" />
           </a>
           <!-- Ícono de carrito SIEMPRE visible -->
           <span class="nav-item ms-auto me-3 order-lg-2">
@@ -79,8 +79,8 @@
       <div class="col text-center">
         <h1 class="text-secondary">PRODUCTOS</h1>
         <p class="text-secondary fs-5 mt-3">
-          Explora nuestra colección de cajitas literarias cuidadosamente curadas. 
-          Cada cajita es un tesoro que contiene artículos inspirados en obras literarias icónicas.
+          Explora la colección de cajas literarias cuidadosamente curadas. 
+          Cada caja es un tesoro que contiene artículos inspirados en obras literarias icónicas.
         </p>
       </div>
     </div>
@@ -119,6 +119,9 @@
       </p>
       <p class="fs-5">
         Si deseas comunicarte con nosotros puedes escribirnos al correo: <a href="mailto:contacto@marikaditasliterarias.com">contacto@marikaditasliterarias.com</a>
+      </p>
+      <p class="fs-5">
+        También puedes suscribir tu email para que nos mantengamos en contacto y, mejor aún, síguenos en nuestras redes sociales.
       </p>
       <p class="text-center p-3">
         <a class="p-3" href="#">
@@ -262,8 +265,9 @@
           .then(productos => {
             productos.forEach(producto => {
               // Determinar la imagen para la tarjeta (la primera del array si existe)
+              const version = '20250912';
               const cardImageHtml = (producto.imagen && producto.imagen.length > 0)
-                ? `<img src="${producto.imagen[0]}" class="card-img-top rounded-4" alt="${producto.titulo}">`
+                ? `<img src="${producto.imagen[0]}?v=${version}" class="card-img-top rounded-4" alt="${producto.titulo}">`
                 : '';
 
               // Crear Tarjeta de Producto
@@ -295,7 +299,7 @@
                 `).join('');
                 const items = producto.imagen.map((img, index) => `
                   <div class="carousel-item ${index === 0 ? 'active' : ''}">
-                    <img src="${img}" class="d-block w-100 rounded-4" alt="${producto.titulo} - Imagen ${index + 1}">
+                    <img src="${img}?v=${version}" class="d-block w-100 rounded-4" alt="${producto.titulo} - Imagen ${index + 1}">
                   </div>
                 `).join('');
 
@@ -314,7 +318,7 @@
                   </div>
                 `;
               } else if (producto.imagen && producto.imagen.length === 1) {
-                modalImageHtml = `<img src="${producto.imagen[0]}" class="img-fluid rounded-4 mb-3" alt="${producto.titulo}">`;
+                modalImageHtml = `<img src="${producto.imagen[0]}?v=${version}" class="img-fluid rounded-4 mb-3" alt="${producto.titulo}">`;
               }
 
               // Crear Modal de Producto

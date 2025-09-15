@@ -3,7 +3,8 @@
     "id": 1,
     "titulo": "Caja Mágica",
     "subtitulo": "Descubre la magia literaria en cada caja.",
-    "detalle": "Estos elementos mágicos nos ayudarán a sobrellevar el mundo \"mogol\" y llenarnos de alegría, creatividad e ingenio, cualidades de las magas y magos.\nEn el interior encontrarás:\n- Una camiseta oversize en tallas S, M y XL.\n- Un pocillo impreso.\n- Un cuaderno tipo agenda.\n- Unos separadores de libros, photcards y stickers.\nTodo gira alrededor de la magia que ofrece la caja.",
+    "detalle": "Estos elementos mágicos nos ayudarán a sobrellevar el mundo 'mogol' y llenarnos de alegría, creatividad e ingenio, cualidades de las magas y magos.\nEn el interior encontrarás:\n- Una camiseta oversize en tallas S, M y XL.\n- Un pocillo impreso.\n- Un cuaderno tipo agenda.\n- Unos separadores de libros, photcards y stickers.\nTodo gira alrededor de la magia que ofrece la caja.",
+    "precio": 140000,
     "imagen": [
       "images/harrypoter/edicion.jpg",
       "images/harrypoter/camisa1.jpg",
@@ -14,7 +15,7 @@
       "images/harrypoter/lenscup.jpg",
       "images/harrypoter/manillas.jpg",
       "images/harrypoter/manillas2.jpg",
-      "images/harrypoter/manillas3.jpg"
+      "images/harrypoter/IMG_2374.jpg"
     ]
   },
   {
