@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coassist Ltda - Rediseño 2025</title>
+    <style>
+        /* --- VARIABLES Y ESTILOS GENERALES --- */
+        :root {
+            --primary-color: #004e86; /* Azul Corporativo */
+            --accent-color: #76bc21; /* Verde Vigoroso */
+            --text-dark: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+            --light-bg: #f4f7f6;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        a { text-decoration: none; }
+        
+        /* --- HEADER --- */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-icon {
+            width: 30px;
+            height: 30px;
+            background: var(--accent-color);
+            border-radius: 50%;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover { color: var(--primary-color); }
+
+        .btn-contact {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        /* --- HERO SECTION (ZONA PRINCIPAL) --- */
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4rem 5%;
+            background: linear-gradient(135deg, #f9fcfd 0%, #eef5f9 100%);
+            min-height: 500px;
+        }
+
+        .hero-text {
+            flex: 1;
+            max-width: 600px;
+            padding-right: 2rem;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        /* CARD DE AUTOGESTIÓN (LOGIN) */
+        .login-card {
+            flex: 0 0 350px;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-top: 5px solid var(--accent-color);
+        }
+
+        .login-card h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .app-btn {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            background: var(--white);
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .app-btn:hover {
+            border-color: var(--primary-color);
+            background: #f0f8ff;
+        }
+
+        .app-btn strong { display: block; color: var(--primary-color); }
+        .app-btn small { display: block; color: var(--text-light); font-size: 0.85rem;}
+
+        /* --- SERVICIOS (GRID) --- */
+        .services {
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 10px;
+            border: 1px solid #eee;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background: #e8f4fa;
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        /* --- GANADORES (FAMILIA COASSIST) --- */
+        .winners {
+            padding: 4rem 5%;
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .winners h2 { color: var(--white); }
+
+        .winner-showcase {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .winner-card {
+            background: var(--white);
+            color: var(--text-dark);
+            border-radius: 12px;
+            width: 280px;
+            overflow: hidden;
+            text-align: left;
+        }
+
+        .winner-img {
+            height: 180px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+        }
+
+        .winner-info { padding: 1.5rem; }
+        .winner-prize { color: var(--accent-color); font-weight: bold; display: block; margin-bottom: 0.5rem;}
+
+        /* --- FOOTER --- */
+        footer {
+            background: #222;
+            color: #aaa;
+            padding: 2rem 5%;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <div class="logo-icon"></div>
+            COASSIST LTDA
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Seguros</a></li>
+                <li><a href="#">Nosotros</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="btn-contact">Contáctanos</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Tu tranquilidad y la de tu familia en las mejores manos</h1>
+            <p>Soluciones integrales en seguros y asistencia. Más de 20 años protegiendo lo que más quieres en Colombia.</p>
+            <a href="#" style="color: var(--primary-color); font-weight: bold; text-decoration: underline;">Conocer nuestros planes &rarr;</a>
+        </div>
+
+        <div class="login-card">
+            <h3>Portal de Clientes</h3>
+            <button class="app-btn">
+                <span>📄</span>
+                <div>
+                    <strong>Cargar Factura</strong>
+                    <small>Gestiona tus pagos rápidamente</small>
+                </div>
+            </button>
+            <button class="app-btn">
+                <span>👥</span>
+                <div>
+                    <strong>Beneficiarios</strong>
+                    <small>Consulta tu grupo familiar</small>
+                </div>
+            </button>
+            <button class="app-btn">
+                <span>📞</span>
+                <div>
+                    <strong>Línea de Ayuda</strong>
+                    <small>Atención inmediata 24/7</small>
+                </div>
+            </button>
+        </div>
+    </section>
+
+    <section class="services">
+        <h2 class="section-title">Nuestros Seguros</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon-box">❤️</div>
+                <h3>Vida Familiar</h3>
+                <p>Protección completa para el futuro de tus seres queridos.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-box">🚑</div>
+                <h3>Accidentes</h3>
+                <p>Cobertura inmediata ante imprevistos médicos.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-box">🏢</div>
+                <h3>Corporativos</h3>
+                <p>Soluciones BPO y seguros colectivos para empresas.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-box">👴</div>
+                <h3>Adulto Mayor</h3>
+                <p>Planes especializados para la edad dorada.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="winners">
+        <h2>🏆 Familia Coassist: Ganadores Recientes</h2>
+        <p>Cada mes premiamos tu fidelidad. ¡Tú podrías ser el próximo!</p>
+        
+        <div class="winner-showcase">
+            <div class="winner-card">
+                <div class="winner-img">FOTO GANADOR</div>
+                <div class="winner-info">
+                    <span class="winner-prize">Premio: $1.000.000</span>
+                    <h4>María González</h4>
+                    <p style="font-size: 0.9rem; color: #666;">Sorteo Junio 2025 - Medellín</p>
+                </div>
+            </div>
+            <div class="winner-card">
+                <div class="winner-img">FOTO GANADOR</div>
+                <div class="winner-info">
+                    <span class="winner-prize">Premio: Kit Tecnológico</span>
+                    <h4>Carlos Rodríguez</h4>
+                    <p style="font-size: 0.9rem; color: #666;">Sorteo Mayo 2025 - Bogotá</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Coassist Ltda. Todos los derechos reservados. | Política de Privacidad</p>
+        <p>Medellín, Colombia - (604) 444 38 38</p>
+    </footer>
+
+</body>
+</html>
