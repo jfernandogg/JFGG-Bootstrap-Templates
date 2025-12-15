@@ -125,3 +125,251 @@
   }
 }
 /* ============ small devices .end// ============ */
+/* Improve visibility and click area for Bootstrap carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 3.5rem;
+  height: 3.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10; /* stay above carousel items */
+  opacity: 1 !important;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 1.6rem 1.6rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  filter: invert(1) brightness(2); /* make the icon visible on dark backgrounds */
+}
+
+/* Make sure controls are clickable on small screens */
+.carousel {
+  position: relative;
+}
+
+.carousel .carousel-control-prev,
+.carousel .carousel-control-next {
+  pointer-events: auto;
+}
+
+/* If carousel controls are still under overlays, bump z-index further for safety */
+.carousel-overlay-fix {
+  z-index: 9999;
+}
+
+/* Refined control placement and white icons to stand out over video thumbnails */
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 9999; /* very high so it sits above iframes */
+  pointer-events: auto;
+}
+
+.carousel-control-prev {
+  left: 0.5rem;
+}
+
+.carousel-control-next {
+  right: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .carousel-control-prev {
+    left: 1rem;
+  }
+  .carousel-control-next {
+    right: 1rem;
+  }
+}
+/* Use explicit white arrow SVGs so icons are always visible */
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L6.707 7l4.647 4.646a.5.5 0 0 1-.708.708l-5-5a.5.5 0 0 1 0-.708l5-5a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 0 0 .708L9.293 7l-4.647 4.646a.5.5 0 0 0 .708.708l5-5a.5.5 0 0 0 0-.708l-5-5a.5.5 0 0 0-.708 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Make the circular background stronger so it contrasts with thumbnails */
+.carousel-control-prev,
+.carousel-control-next {
+  background: rgba(0, 0, 0, 0.45);
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* reduce interference from iframe stacking contexts */
+.carousel iframe {
+  position: relative;
+  z-index: 1;
+}
+
+/* Reduce vertical gap between section title and carousel, and place controls outside thumbnails */
+#testimonios-slider, #ganadores-slider {
+  padding-top: 2rem; /* override py-5 top padding */
+  padding-bottom: 2rem;
+}
+
+#testimonios-slider h2, #ganadores-slider h2 {
+  margin-bottom: 0.5rem; /* tighten space under title */
+}
+
+#testimoniosCarousel, #ganadoresCarousel {
+  margin-top: 0.5rem; /* small gap between heading and carousel */
+}
+
+/* Center controls vertically and move them outside the carousel thumbnails */
+/* Carousel controls: only left for prev, only right for next */
+#testimoniosCarousel .carousel-control-prev,
+#ganadoresCarousel .carousel-control-prev {
+  top: 50%;
+  left: -1.2rem;
+  transform: translateY(-50%);
+  right: auto;
+}
+
+#testimoniosCarousel .carousel-control-next,
+#ganadoresCarousel .carousel-control-next {
+  top: 50%;
+  right: -1.2rem;
+  transform: translateY(-50%);
+  left: auto;
+}
+
+@media (min-width: 992px) {
+  #testimoniosCarousel .carousel-control-prev,
+  #ganadoresCarousel .carousel-control-prev {
+    left: -2rem;
+  }
+  #testimoniosCarousel .carousel-control-next,
+  #ganadoresCarousel .carousel-control-next {
+    right: -2rem;
+  }
+}
+@media (max-width: 767px) {
+  #testimoniosCarousel .carousel-control-prev,
+  #ganadoresCarousel .carousel-control-prev {
+    left: 0.25rem;
+  }
+  #testimoniosCarousel .carousel-control-next,
+  #ganadoresCarousel .carousel-control-next {
+    right: 0.25rem;
+  }
+}
+/* Reduce even more the gap between title and carousel */
+#testimonios-slider h2, #ganadores-slider h2 {
+  margin-bottom: 0.2rem;
+}
+
+#testimoniosCarousel, #ganadoresCarousel {
+  margin-top: 0.2rem;
+}
+
+/* Mejoras de visibilidad y usabilidad para controles del carrusel de ganadores */
+#carouselGanadores .carousel-control-prev,
+#carouselGanadores .carousel-control-next {
+  background-color: #3b51a3; /* Color primario para resaltar sobre el fondo */
+  opacity: 0.9;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra para levantar del fondo */
+  z-index: 20;
+}
+
+#carouselGanadores .carousel-control-prev:hover,
+#carouselGanadores .carousel-control-next:hover {
+  background-color: #2a3b7a;
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1); /* Feedback visual al pasar el mouse */
+}
+
+#carouselGanadores .carousel-control-prev-icon,
+#carouselGanadores .carousel-control-next-icon {
+  filter: none; /* Restaurar icono blanco original */
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+#carouselGanadores .carousel-control-prev {
+  left: 1rem;
+}
+
+#carouselGanadores .carousel-control-next {
+  right: 1rem;
+}
+
+@media (min-width: 992px) {
+  #carouselGanadores .carousel-control-prev {
+    left: 2rem;
+  }
+  #carouselGanadores .carousel-control-next {
+    right: 2rem;
+  }
+}
+/* Estilos para la navegación por meses en el carrusel de ganadores */
+#carouselGanadores .carousel-indicators {
+  position: static; /* Quitamos posición absoluta para que fluya en el documento */
+  margin: 0;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#carouselGanadores .carousel-indicators button {
+  width: auto;
+  height: auto;
+  text-indent: 0; /* Mostrar texto */
+  background-color: transparent;
+  border: none;
+  opacity: 0.5;
+  color: #3b51a3; /* Color primario */
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 15px;
+  padding: 5px;
+  transition: all 0.3s ease;
+}
+
+#carouselGanadores .carousel-indicators button.active {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Separador entre meses (no se muestra después del último elemento) */
+#carouselGanadores .carousel-indicators button:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: -18px; /* Ajuste de posición del separador */
+  color: #3b51a3;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+#carouselGanadores .carousel-indicators button {
+  position: relative; /* Para posicionar el separador */
+}
