@@ -27,6 +27,12 @@ function createMenuItem(item) {
         a.dataset.bsToggle = 'dropdown';
         a.ariaExpanded = 'false';
         a.textContent = item.name;
+        if (item.target) {
+            a.target = item.target;
+            if (item.target === '_blank') {
+                a.rel = 'noopener noreferrer';
+            }
+        }
 
         const ul = document.createElement('ul');
         ul.className = 'dropdown-menu submenu';
@@ -47,6 +53,12 @@ function createMenuItem(item) {
         a.className = 'nav-link';
         a.href = item.link;
         a.textContent = item.name;
+        if (item.target) {
+            a.target = item.target;
+            if (item.target === '_blank') {
+                a.rel = 'noopener noreferrer';
+            }
+        }
         li.appendChild(a);
     }
 

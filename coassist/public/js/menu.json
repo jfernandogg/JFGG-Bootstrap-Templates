@@ -165,7 +165,8 @@
             },
             {
                 "name": "Trabaja con nosotros",
-                "link": "trabajaconnosotros.html"
+                "link": "https://compaia-administradora-seguros-y-servicios-coassist-limitada.pandape.computrabajo.com/",
+                "target": "_blank"
             }
         ]
     },
