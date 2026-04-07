@@ -4,6 +4,38 @@
   margin: 0 auto;
 }
 
+.prods {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* Navbar responsive */
+.navbar-brand .img-logo {
+  width: 300px;
+  height: auto;
+}
+
+@media (max-width: 991px) {
+  .navbar-brand .img-logo {
+    width: 200px;
+  }
+  .navbar-toggler {
+    order: 0;
+    z-index: 1050;
+  }
+  .navbar-brand {
+    order: 1;
+    flex-grow: 1;
+    text-align: center;
+  }
+  .navbar-collapse {
+    order: 2;
+  }
+  .navbar-toggler {
+    padding: 0.5rem;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+  }
+}
 .imagesep-container {
   width: 100%; /* Ancho deseado del contenedor */
   height: 150px; /* Alto deseado del contenedor */

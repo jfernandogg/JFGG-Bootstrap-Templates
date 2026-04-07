@@ -13,11 +13,8 @@
 
   <nav class="navbar navbar-expand-xl fixed-top navbar-light">
         <div class="container-fluid d-flex">
-          <a href="index.html" class="navbar-brand">
-            <img src="images/LogoCoassist_400.png" alt="" width="300" />
-          </a>
           <button 
-            class="navbar-toggler" 
+            class="navbar-toggler order-0" 
             type="button" 
             data-bs-toggle="collapse"
             data-bs-target="#navbarNavDropdown"
@@ -27,7 +24,10 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <a href="index.html" class="navbar-brand order-1">
+            <img src="images/LogoCoassist_400.png" alt="" class="img-logo" />
+          </a>
+          <div class="collapse navbar-collapse order-3" id="navbarNavDropdown">
             <ul id="menuItems" class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
             <span class="d-flex align-items-center">
               <a class="btn btn-sm btn-primary me-2" href="https://awc.coassist.com.co/wtr/blank_landing_page/" target="_blank">Beneficiarios</a>
@@ -157,7 +157,7 @@
         </div>
       </div>
     <div class="container-fluid">
-        <div class="prods row ms-8">
+        <div class="prods row">
             <div class="col-12 col-xl-4 mb-3">
               <div class="card cardprod" style="width: 18rem;">
                 <img src="./images/coassist-seguros-fondo-foto-24.jpg" class="card-img-top" alt="Accidentes Personales">
