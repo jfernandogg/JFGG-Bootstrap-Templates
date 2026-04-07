@@ -1,3 +1,10 @@
+function closeJobNotification() {
+    const notification = document.getElementById('job-notification');
+    if (notification) {
+        notification.classList.remove('show');
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     fetch('/js/menu.json')
         .then(response => response.json())
@@ -7,20 +14,28 @@ document.addEventListener('DOMContentLoaded', function () {
                 const menuItem = createMenuItem(item);
                 menuItemsContainer.appendChild(menuItem);
             });
+            // Inicializar comportamiento de submenús después de cargar los datos
+            initMobileMenu();
         })
         .catch(error => console.error('Error al cargar el menú:', error));
+
+    // Mostrar aviso de vacantes después de 3 segundos
+    setTimeout(() => {
+        const notification = document.getElementById('job-notification');
+        if (notification) {
+            notification.classList.add('show');
+        }
+    }, 3000);
 });
 
-function createMenuItem(item) {
-    console.log("Agregando item: "+item.name);
+function createMenuItem(item, isSubmenu = false) {
     const li = document.createElement('li');
-    li.className = 'nav-item';
+    li.className = isSubmenu ? '' : 'nav-item';
 
     if (item.submenu && Array.isArray(item.submenu) && item.submenu.length > 0) {
-        console.log("Se valido que tiene un submenu");
-        li.className += ' dropdown';
+        li.classList.add('dropdown');
         const a = document.createElement('a');
-        a.className = 'nav-link dropdown-toggle';
+        a.className = isSubmenu ? 'dropdown-item dropdown-toggle' : 'nav-link dropdown-toggle';
         a.href = item.link || '#';
         a.id = `navbarDropdown${item.name.replace(/\s/g, '')}`;
         a.role = 'button';
@@ -38,20 +53,17 @@ function createMenuItem(item) {
         ul.className = 'dropdown-menu submenu';
         ul.ariaLabelledby = a.id;
         item.submenu.forEach(subItem => {
-            const subMenuItem = createMenuItem(subItem);
-            const hr = document.createElement('hr');
+            const subMenuItem = createMenuItem(subItem, true);
             ul.appendChild(subMenuItem);
-            ul.appendChild(hr);
         });
 
         li.appendChild(a);
         li.appendChild(ul);
 
     } else {
-        console.log("No tiene submenu");
         const a = document.createElement('a');
-        a.className = 'nav-link';
-        a.href = item.link;
+        a.className = isSubmenu ? 'dropdown-item' : 'nav-link';
+        a.href = item.link || '#';
         a.textContent = item.name;
         if (item.target) {
             a.target = item.target;
@@ -65,10 +77,8 @@ function createMenuItem(item) {
     return li;
 }
 
-document.addEventListener("DOMContentLoaded", function(){
-    // make it as accordion for smaller screens
+function initMobileMenu() {
     if (window.innerWidth < 992) {
-    
       // close all inner dropdowns when parent is closed
       document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
         everydropdown.addEventListener('hidden.bs.dropdown', function () {
@@ -96,6 +106,4 @@ document.addEventListener("DOMContentLoaded", function(){
         });
       })
     }
-    // end if innerWidth
-    }); 
-    // DOMContentLoaded  end
+}

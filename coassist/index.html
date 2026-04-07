@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/fontawesome.css" />
     <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/fontawesome.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Coassist Ltda</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -260,30 +260,13 @@
       <div id="carouselGanadores" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <!-- Indicadores de Meses (Navegación) -->
         <div class="carousel-indicators mb-4">
-          <button type="button" data-bs-target="#carouselGanadores" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">Enero 2026</button>
-          <button type="button" data-bs-target="#carouselGanadores" data-bs-slide-to="1" aria-label="Slide 2">Febrero 2026</button>
+          <button type="button" data-bs-target="#carouselGanadores" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">Febrero 2026</button>
+          <button type="button" data-bs-target="#carouselGanadores" data-bs-slide-to="1" aria-label="Slide 2">Marzo 2026</button>
         </div>
 
         <div class="carousel-inner">
-          <!-- Slide Enero - I -->
-          <div class="carousel-item active">
-            <div class="container-fluid mt-5 mb-5">
-              <div class="row justify-content-center mx-2 mx-md-5">
-                <div class="col-12 col-xl-4 mb-4">
-                  <div class="card shadow rounded-4">
-                    <img src="images/ganadores/20260101_sv.jpg" class="card-img-top rounded-4" alt="Ganador Enero 2026 SV">
-                  </div>
-                </div>
-                <div class="col-12 col-xl-4 mb-4">
-                  <div class="card shadow rounded-4">
-                    <img src="images/ganadores/20260102_7030.jpg" class="card-img-top rounded-4" alt="Ganador Enero 2026 7030">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
           <!-- Slide Febrero - I -->
-          <div class="carousel-item">
+          <div class="carousel-item active">
             <div class="container-fluid mt-5 mb-5">
               <div class="row justify-content-center mx-2 mx-md-5">
                 <div class="col-12 col-xl-4 mb-4">
@@ -294,6 +277,23 @@
                 <div class="col-12 col-xl-4 mb-4">
                   <div class="card shadow rounded-4">
                     <img src="images/ganadores/20260202_7030.jpg" class="card-img-top rounded-4" alt="Ganador Febrero 2026 7030">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide Marzo - I -->
+          <div class="carousel-item">
+            <div class="container-fluid mt-5 mb-5">
+              <div class="row justify-content-center mx-2 mx-md-5">
+                <div class="col-12 col-xl-4 mb-4">
+                  <div class="card shadow rounded-4">
+                    <img src="images/ganadores/20260330_7030.jpg" class="card-img-top rounded-4" alt="Ganador Marzo 2026 SV">
+                  </div>
+                </div>
+                <div class="col-12 col-xl-4 mb-4">
+                  <div class="card shadow rounded-4">
+                    <img src="images/ganadores/20260401_7030.jpg" class="card-img-top rounded-4" alt="Ganador Marzo 2026 7030">
                   </div>
                 </div>
               </div>
@@ -418,6 +418,18 @@
         </div>
       </div>
     </footer>
+
+    <!-- Aviso de Vacantes Flotante -->
+    <div id="job-notification" class="job-notification">
+      <p class="m-0">¡Estamos buscando talento! Revisa nuestras vacantes disponibles.</p>
+      <a href="https://compaia-administradora-seguros-y-servicios-coassist-limitada.pandape.computrabajo.com/" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="btn btn-success fw-bold">
+         Trabaje con nosotros
+      </a>
+      <button type="button" class="btn-close" aria-label="Close" onclick="closeJobNotification()"></button>
+    </div>
 
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/js/script.js"></script>
