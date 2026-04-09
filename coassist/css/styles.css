@@ -406,3 +406,49 @@
     gap: 0.5rem;
   }
 }
+:root {
+  --color-primario: #0b4c5f; /* Azul oscuro corporativo */
+  --color-aguamarina: #20c997; /* Verde aguamarina */
+  --color-aguamarina-light: #e6f9f4; /* Fondo suave */
+  --gradient-btn: linear-gradient(135deg, #20c997 0%, #17a2b8 100%);
+}
+
+.btn-pqr-footer {
+  background: linear-gradient(135deg, #20c997 0%, #0b4c5f 100%);
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 8px; /* Borde más sutil y elegante para el footer */
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn-pqr-footer:hover {
+  background: linear-gradient(135deg, #0b4c5f 0%, #20c997 100%);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(32, 201, 151, 0.4);
+}
+
+/* Ajuste del color aguamarina corporativo para enlaces e iconos */
+.text-cyan {
+  color: #20c997 !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.text-cyan:hover {
+  color: #17a2b8 !important; /* Cambio sutil al pasar el cursor */
+  text-decoration: underline;
+}
+
+/* Fondo por defecto en caso de que no tengas definida la clase .footer-bg */
+.footer-bg {
+  background-color: #0b4c5f; /* Azul corporativo oscuro */
+}

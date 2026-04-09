@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/fontawesome.css" />
     <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/fontawesome.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Coassist Ltda</title>
 </head>
 <body class="body">
@@ -29,8 +29,8 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul id="menuItems" class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
               <span class="d-flex align-items-center">
-                <a class="btn btn-sm btn-primary me-2" href="https://awc.coassist.com.co/wtr/blank_landing_page/" target="_blank">Beneficiarios</a>
-                <a class="btn btn-sm btn-secondary"  href="https://awc.coassist.com.co/sf/control_contrato_in/" target="_blank">Carga tu factura</a>
+                <a class="btn btn-sm btn-primary" href="https://awc.coassist.com.co/wtr/blank_landing_page/" target="_blank">Trámites</a>
+              <a class="btn btn-sm btn-secondary" href="https://awc.coassist.com.co/sf/control_contrato_in/" target="_blank">Carga tu factura</a>
               </span>
           </div>
         </div>
@@ -67,41 +67,50 @@
   </section>    
 
     <!-- Pie de pagina-->
-    <footer class="footer-bg mt-4">
-      <div class="row ms-8 g-0 text-white">
-        <div class="col-xl-4 col-12 p-2">
-          <i class="fa-regular fa-envelope"></i>
-          <b>Escribenos:</b><br/>
-          <a href="mailto:servicioalcliente@coassist.com.co" class="text-cyan">servicioalcliente@coassist.com.co</a>
-        </div>
-        <div class="col-xl-4 col-12 p-2">
-          <i class="fa-regular fa-phone-volume"></i>
-          <b>Llamanos:</b><br/>
-          <p><a href="sip:6044443838" class="text-cyan">6044443838</a></p>
-        </div>
-        <div class="col-xl-4 col-12 p-2">
-          <i class="fa-solid fa-location-dot"></i>
-          <b>Dirección:</b><br/>
-          <p>COASSIST LTDA. <br/>
-            Carrera 65 # 8B-91 <br/>
-            Medellín, Colombia</p>
-        </div>
+    <footer class="footer-bg mt-4 p-4 pb-3">
+  <div class="container">
+    <div class="row g-4 text-white align-items-center">
+      
+      <div class="col-xl-4 col-md-12 col-12 text-center text-xl-start p-2">
+        <a href="https://awc.coassist.com.co/pqr/control_entrada/" target="_blank" class="btn btn-pqr-footer w-100 w-xl-auto">
+            <i class="fa-solid fa-file-shield fa-lg"></i>
+            PQRs
+        </a>
       </div>
-      <div class="row g-0 text-white text-center"> 
-        <div class="col">
-          © 2018 Coassist. Todos los derechos reservados. I 
-          <a href="/pdfs/20250530_PoliticaPrivacidad_Tratamiento_Datos_Personales.pdf" target="_blank" class="text-cyan">
-            Politica de tratamiento de datos personales
-          </a>
-        </div>
+
+      <div class="col-xl-4 col-md-6 col-12 text-center p-2">
+        <i class="fa-solid fa-phone-volume mb-2 fa-lg text-cyan"></i><br/>
+        <b>Llámanos:</b><br/>
+        <a href="sip:6044443838" class="text-cyan fw-bold">6044443838</a>
       </div>
-    </footer>
+
+      <div class="col-xl-4 col-md-6 col-12 text-center text-xl-end p-2">
+        <i class="fa-solid fa-location-dot mb-2 fa-lg text-cyan"></i><br/>
+        <b>Dirección:</b><br/>
+        <p class="mb-0">
+          COASSIST LTDA.<br/>
+          Carrera 65 # 8B-91<br/>
+          Medellín, Colombia
+        </p>
+      </div>
+
+    </div>
+
+    <hr class="border-secondary mt-4 mb-3 opacity-50">
+
+    <div class="row g-0 text-white text-center"> 
+      <div class="col small">
+        © 2018 - 2026 Coassist. Todos los derechos reservados. | 
+        <a href="/pdfs/20250530_PoliticaPrivacidad_Tratamiento_Datos_Personales.pdf" target="_blank" class="text-cyan">
+          Política de tratamiento de datos personales
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
 
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/js/script.js"></script>
-<!-- begin olark code -->
-    <script type="text/javascript" async> ;(function(o,l,a,r,k,y){if(o.olark)return; r="script";y=l.createElement(r);r=l.getElementsByTagName(r)[0]; y.async=1;y.src="//"+a;r.parentNode.insertBefore(y,r); y=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)}; y.extend=function(i,j){y("extend",i,j)}; y.identify=function(i){y("identify",k.i=i)}; y.configure=function(i,j){y("configure",i,j);k.c[i]=j}; k=y._={s:[],t:[+new Date],c:{},l:a}; })(window,document,"static.olark.com/jsclient/loader.js");
-    olark.identify('3293-302-10-4641');</script>
-    <!-- end olark code -->
+
 </body>
 </html>
