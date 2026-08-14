@@ -8,6 +8,19 @@
 .prods {
     margin-left: 0;
     padding-left: 0;
+    justify-content: center;
+}
+
+.prods > [class*="col-"] {
+    display: flex;
+    justify-content: center;
+}
+
+.testimonios-videos iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
 }
 
 /* Navbar responsive */
@@ -47,16 +60,17 @@
 .imagesep-container {
     width: 100%; /* Ancho deseado del contenedor */
     height: 150px; /* Alto deseado del contenedor */
+    background-color: #082944; /* Evita espacios blancos en pantallas anchas */
     overflow: hidden; /* Oculta la parte de la imagen que sobrepasa el contenedor */
     position: relative; /* Necesario para el posicionamiento absoluto de la imagen */
 }
 .imagesep-container img {
     position: absolute; /* Permite mover la imagen dentro del contenedor */
-    top: -280px; /* Ajusta la posición vertical */
-    left: 0px; /* Ajusta la posición horizontal */
-    width: auto;
-    height: auto;
-    max-width: none; /* Asegura que la imagen no se escale automáticamente */
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 48%;
 }
 
 .image-overlay {
