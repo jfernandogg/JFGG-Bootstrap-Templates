@@ -2,7 +2,7 @@
   {
     "id": 1,
     "titulo": "CAJA MÁGICA",
-    "subtitulo": "¡Sin miedo! Entra en la plataforma 9 ¾ y descubre el mundo de Hogwarts, dondevivirás aventuras con tus amigos.",
+    "subtitulo": "¡Sin miedo!\nEntra en la plataforma 9¾ y descubre el mundo de Hogwarts, donde vivirás aventuras con tus amigos.",
     "detalle": "Para sobrellevar el mundo &#39;mogol&#39; necesitarás estos elementos mágicos que te\nayudarán a llenar de alegría, creatividad e ingenio, tu alma mágica. Las herramientas\nse encuentran en el interior:\n- Una camiseta oversize en tallas S, M y XL\n- Un pocillo\n- Un cuaderno\n- Separadores, photo cards y stickers.\nTodo alrededor de la magia que te ofrece Pandora.",
     "precio": 140000,
     "imagen": [
@@ -56,7 +56,7 @@
   {
     "id": 4,
     "titulo": "Caja Viajera",
-    "subtitulo": "Eres una viajera y el mundo te queda pequeño, por eso explora nuestra caja inspirada\nen Julio Verne ¡Ve a donde pocos se atreven!",
+    "subtitulo": "Eres una viajera y el mundo te queda pequeño, por eso explora nuestra caja inspirada en Julio Verne\n¡Ve a donde pocos se atreven!",
     "detalle": "Aventureros sabemos que el mundo tiene muchas cosas por conocer y descubrir y que\nmejor que hacerlo acompañado de artículos que te harán más fácil el viaje en la caja\nencontrarás:\n- Una camiseta oversize en tallas S, M y XL\n- Un pocillo\n- Un cuaderno\n- Separadores, photo cards y stickers.",
     "precio": 140000,
     "imagen": [
