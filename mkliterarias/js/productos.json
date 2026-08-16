@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "titulo": "Caja Mágica",
-    "subtitulo": "Descubre la magia literaria en cada caja.",
-    "detalle": "Estos elementos mágicos nos ayudarán a sobrellevar el mundo 'mogol' y llenarnos de alegría, creatividad e ingenio, cualidades de las magas y magos.\nEn el interior encontrarás:\n- Una camiseta oversize en tallas S, M y XL.\n- Un pocillo impreso.\n- Un cuaderno tipo agenda.\n- Unos separadores de libros, photcards y stickers.\nTodo gira alrededor de la magia que ofrece la caja.",
+    "titulo": "CAJA MÁGICA",
+    "subtitulo": "¡Sin miedo! Entra en la plataforma 9 ¾ y descubre el mundo de Hogwarts, dondevivirás aventuras con tus amigos.",
+    "detalle": "Para sobrellevar el mundo &#39;mogol&#39; necesitarás estos elementos mágicos que te\nayudarán a llenar de alegría, creatividad e ingenio, tu alma mágica. Las herramientas\nse encuentran en el interior:\n- Una camiseta oversize en tallas S, M y XL\n- Un pocillo\n- Un cuaderno\n- Separadores, photo cards y stickers.\nTodo alrededor de la magia que te ofrece Pandora.",
     "precio": 140000,
     "imagen": [
       "images/harrypoter/edicion.jpg",
@@ -22,9 +22,9 @@
   },
   {
     "id": 2,
-    "titulo": "Caja Vampírica",
-    "subtitulo": "Para los amantes de este genero literario gótico.",
-    "detalle": "Una colección de objetos oscuros y seductores inspirados en las criaturas de la noche.\nPerfecta para quienes disfrutan las historias de vampiros y del romance gótico.\nEn el interior encontrarás:\n- Una camiseta oversize en tallas S, M y XL.\n- Un pocillo impreso.\n- Un cuaderno tipo agenda.\n- Unos separadores de libros, photcards y stickers.\nTodo gira alrededor del submundo que ofrece la caja.",
+    "titulo": "CAJA VAMPIROS",
+    "subtitulo": "¡La oscuridad te llama!\nRespondele con esta caja que te traemos del inframundo.",
+    "detalle": "Lo tuyo es lo gótico, los objetos oscuros y seductores, la noche es perfecta para quienes\ninspirados en las criaturas inmortales disfrutan del romance. En el interior\nencontrarás:\n- Una camiseta oversize en tallas S, M y XL\n- Un pocillo\n- Un cuaderno -\nSeparadores, photo cards y stickers.\nPara los vampiros que instaron a abrir la caja.",
     "precio": 140000,
     "imagen": [
       "images/vampiros/IMG_2388.jpg",
@@ -38,9 +38,9 @@
   },
   {
     "id": 3,
-    "titulo": "Caja Diversa",
-    "subtitulo": "Celebrando la diversidad literaria.",
-    "detalle": "Explora diferentes voces y perspectivas con esta caja inclusiva y enriquecedora. Un homenaje a la pluralidad de historias que merecen ser contadas.",
+    "titulo": "CAJA DIVERSA",
+    "subtitulo": "Para celebrar el amor, nada mejor que… ¡una demostración romántica!\nPremiate con esta caja que celebra tu diversidad y tu amor propio o compartido.",
+    "detalle": "Las historias de amor siempre nos conmueven, por eso Pandora quiere dedicarte una\nde sus cajas para que cuentes tu historia y la retrates con los siguientes elementos que\nencontrarás en el interior\n- Una camiseta oversize en tallas S, M y XL\n- Un pocillo\n- Un cuaderno\n- Separadores, photo cards y stickers.",
     "precio": 140000,
     "imagen": [
       "images/diversa/IMG_2382.jpg",
@@ -55,9 +55,9 @@
   },
   {
     "id": 4,
-    "titulo": "Cajita Viajera",
-    "subtitulo": "Un viaje a través de la literatura.",
-    "detalle": "Los viajes siempre son un motivo de felicidad y aprendizaje, pero se hacen únicos cuando los acompañas de elementos que marcan esa historia.\nPor eso te presentamos esta caja literaria que explora el mundo a través de los ojos de Julio Verne.\nEn el interior encontrarás:\n- Una camiseta oversize en tallas S, M y XL.\n- Un pocillo impreso.\n- Un cuaderno tipo agenda.\n- Unos separadores de libros, photcards y stickers.\nTodo gira alrededor de los viajes que ofrece la caja.",
+    "titulo": "Caja Viajera",
+    "subtitulo": "Eres una viajera y el mundo te queda pequeño, por eso explora nuestra caja inspirada\nen Julio Verne ¡Ve a donde pocos se atreven!",
+    "detalle": "Aventureros sabemos que el mundo tiene muchas cosas por conocer y descubrir y que\nmejor que hacerlo acompañado de artículos que te harán más fácil el viaje en la caja\nencontrarás:\n- Una camiseta oversize en tallas S, M y XL\n- Un pocillo\n- Un cuaderno\n- Separadores, photo cards y stickers.",
     "precio": 140000,
     "imagen": [
       "images/viajera/IMG_2387.jpg",

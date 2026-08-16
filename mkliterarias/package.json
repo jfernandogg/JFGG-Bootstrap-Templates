@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "sass:build": "sass --no-source-map scss:css",
-    "sass:watch": "sass --no-source-map --watch scss:css"
+    "sass:watch": "sass --no-source-map --watch scss:css",
+    "dev": "npx --yes serve -l 3000 .",
+    "serve": "npx --yes serve -l 3000 ."
   },
   "author": "Juan F Gallego",
   "license": "GPL-3.0-or-later",
